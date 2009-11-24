@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  stage_type_id: 1
+  project_id: 1
+
+two:
+  stage_type_id: 1
+  project_id: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  block_id: 1
+  stage_id: 1
+  cost: 1
+
+two:
+  block_id: 1
+  stage_id: 1
+  cost: 1

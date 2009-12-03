@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  cost: 1
 
 two:
   name: MyString
-  cost: 1

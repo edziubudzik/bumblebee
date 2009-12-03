@@ -3,9 +3,7 @@
 one:
   block_type_id: 1
   project_id: 1
-  cost: 1
 
 two:
   block_type_id: 1
   project_id: 1
-  cost: 1

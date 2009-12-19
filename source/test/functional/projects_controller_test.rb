@@ -43,4 +43,33 @@ class ProjectsControllerTest < ActionController::TestCase
     
     assert_template "new"
   end
+  
+  test "should get edit" do
+    project = Project.create(:name => 'Projekt 1')
+    
+    get :edit, :id => project.id
+    assert_response :success
+    assert_not_nil assigns(:project)
+  end
+  
+  test "should update project" do
+    new_name = 'Project 2'
+    project = Project.create(:name => 'Projekt 1')
+    
+    put :update, {:id => project.id, :project => { :name => new_name } }
+    
+    assert_equal assigns(:project).name, new_name
+    assert_equal assigns(:project).id, project.id
+    assert_redirected_to project_path(assigns(:project))
+  end
+  
+  test "should delete project" do
+    project = Project.create(:name => 'Projekt 3')
+    
+    assert_difference('Project.count', -1) do
+      delete :destroy, :id => project.id
+    end
+    
+    assert_redirected_to projects_path
+  end
 end

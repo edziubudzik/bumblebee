@@ -1067,3 +1067,220 @@ Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/projects/new]
   [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
   [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-12-19 18:35:03) [GET]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/projects]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-12-19 18:35:46) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+  [4;36;1mProject Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+Completed in 26ms (View: 6, DB: 16) | 200 OK [http://localhost/projects]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-12-19 18:36:14) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+  [4;36;1mProject Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://localhost/projects]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2009-12-19 18:36:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (1.1ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+
+ActionView::MissingTemplate (Missing template projects/edit.erb in view path app/views):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2009-12-19 18:37:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Rendered projects/_form (0.7ms)
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/projects/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#update (for 127.0.0.1 at 2009-12-19 18:43:57) [PUT]
+  Parameters: {"authenticity_token"=>"O24unygDaQaV0j0hnlFMHo+tOhzYkVBTjtL1oHTFLXE=", "id"=>"1", "project"=>{"name"=>"Gurgul jest głupi2"}}
+  [4;35;1mProject Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProject Update (0.2ms)[0m   [0;1mUPDATE `projects` SET `updated_at` = '2009-12-19 17:43:57', `name` = 'Gurgul jest głupi2' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/projects/1
+Completed in 11ms (DB: 3) | 302 Found [http://localhost/projects/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2009-12-19 18:43:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 8ms (View: 1, DB: 2) | 200 OK [http://localhost/projects/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2009-12-19 18:44:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (1.5ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 13ms (View: 5, DB: 3) | 200 OK [http://localhost/projects/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2009-12-19 18:44:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (1.8ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 10ms (View: 2, DB: 3) | 200 OK [http://localhost/projects/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2009-12-19 18:49:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/projects/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-12-19 18:49:15) [GET]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+  [4;35;1mProject Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/projects/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#destroy (for 127.0.0.1 at 2009-12-19 18:49:34) [DELETE]
+  Parameters: {"authenticity_token"=>"O24unygDaQaV0j0hnlFMHo+tOhzYkVBTjtL1oHTFLXE=", "id"=>"1"}
+  [4;36;1mProject Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (1.0ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProject Destroy (0.2ms)[0m   [0mDELETE FROM `projects` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed in 10ms (DB: 3) | 302 Found [http://localhost/projects/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-12-19 18:49:34) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/projects]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2009-12-19 18:49:41) [GET]
+  [4;36;1mProject Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_form (1.1ms)
+Completed in 11ms (View: 4, DB: 2) | 200 OK [http://localhost/projects/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2009-12-19 18:49:43) [POST]
+  Parameters: {"authenticity_token"=>"O24unygDaQaV0j0hnlFMHo+tOhzYkVBTjtL1oHTFLXE=", "project"=>{"name"=>"test"}}
+  [4;35;1mProject Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('test', '2009-12-19 17:49:43', '2009-12-19 17:49:43')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/2
+Completed in 11ms (DB: 3) | 302 Found [http://localhost/projects]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2009-12-19 18:49:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProject Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/projects/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-12-19 18:49:46) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+  [4;36;1mProject Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://localhost/projects]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#destroy (for 127.0.0.1 at 2009-12-19 18:49:53) [DELETE]
+  Parameters: {"authenticity_token"=>"O24unygDaQaV0j0hnlFMHo+tOhzYkVBTjtL1oHTFLXE=", "id"=>"2"}
+  [4;35;1mProject Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProject Destroy (0.2ms)[0m   [0;1mDELETE FROM `projects` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed in 10ms (DB: 3) | 302 Found [http://localhost/projects/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2009-12-19 18:49:53) [GET]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/projects]

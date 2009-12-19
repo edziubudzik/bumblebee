@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091219182520) do
+ActiveRecord::Schema.define(:version => 20091219184104) do
 
   create_table "block_types", :force => true do |t|
     t.string   "name"

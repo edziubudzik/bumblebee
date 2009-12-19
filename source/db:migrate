@@ -1,0 +1,57 @@
+Script started on Sat Dec 19 19:43:07 2009
+bash-3.2$ mate .[K[K[K[K[K[Krake db:migrate
+(in /Users/piotrek/Projekty/bumblebee/source)
+==  InsertDefaultStageTypes: migrating ========================================
+==  InsertDefaultStageTypes: migrated (0.0367s) ===============================
+
+bash-3.2$ re[Kak[Kke db:migrate[C[C[C[C[C[C[C[C[C[C[9Pmate .cd Projekty/2plus3d/src[C[C[C[C[C[C[C[C[C[C[9Pping google.pl10.10.10.1[1Pgoogle.pl[C[C[C[C[C[C[C[C[C[Cssh bator@korn.rootnode.net[C[C[C[C[C[C[C[C[C[C[13Pping google.pl10.10.10.1[1Pgoogle.pl[C[C[C[C[C[C[C[C[C[Ccd Projekty/2plus3d/src[C[C[C[C[C[C[C[C[C[Cmate .[Krake db:migrate[Kke db:test:load
+(in /Users/piotrek/Projekty/bumblebee/source)
+bash-3.2$ git status .
+# On branch master
+# Your branch is ahead of 'origin/master' by 5 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	[32mmodified:   app/models/stage_type.rb[m
+#	[32mmodified:   db/schema.rb[m
+#	[32mmodified:   log/development.log[m
+#	[32mmodified:   log/test.log[m
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   ../resources/db/diagram.vpp[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m../.gitignore[m
+#	[31m../resources/db/diagram.vpp~1[m
+#	[31m../resources/ui/prototypes/demo.psd[m
+#	[31m../resources/ui/prototypes/main.psd[m
+#	[31mdb/migrate/20091219184104_insert_default_stage_types.rb[m
+#	[31mdb:migrate[m
+bash-3.2$ vim .gitc[Kig[K[K[K[K[K[K[K[K[K[Kls -al
+total 40
+drwxr-xr-x  16 piotrek  staff    544 19 gru 19:43 .
+drwxr-xr-x   7 piotrek  staff    238  3 gru 19:04 ..
+-rw-r--r--   1 piotrek  staff  10011 29 paź 22:34 README
+-rw-r--r--   1 piotrek  staff    307 29 paź 22:34 Rakefile
+drwxr-xr-x   6 piotrek  staff    204 29 paź 22:34 app
+drwxr-xr-x   9 piotrek  staff    306 29 paź 22:34 config
+drwxr-xr-x   5 piotrek  staff    170 22 lis 15:23 db
+-rw-r--r--   1 piotrek  staff   1793 19 gru 19:50 db:migrate
+drwxr-xr-x   3 piotrek  staff    102 29 paź 22:34 doc
+drwxr-xr-x   3 piotrek  staff    102 29 paź 22:34 lib
+drwxr-xr-x   6 piotrek  staff    204 29 paź 22:34 log
+drwxr-xr-x  11 piotrek  staff    374 29 paź 22:34 public
+drwxr-xr-x  11 piotrek  staff    374 29 paź 22:34 script
+drwxr-xr-x   9 piotrek  staff    306  3 gru 18:58 test
+drwxr-xr-x   6 piotrek  staff    204 29 paź 22:34 tmp
+drwxr-xr-x   3 piotrek  staff    102 29 paź 22:34 vendor
+bash-3.2$ exit
+exit
+
+Script done on Sat Dec 19 19:50:32 2009

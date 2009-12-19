@@ -8219,3 +8219,56 @@ Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932800?proje
   [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/stage_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/stage_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mStageType Create (0.2ms)[0m   [0mINSERT INTO `stage_types` (`name`, `position`, `created_at`, `updated_at`) VALUES('Etap 1', 3, '2009-12-19 18:49:11', '2009-12-19 18:49:11')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m

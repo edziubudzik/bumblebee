@@ -1,0 +1,413 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (95.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (133.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20091122122443)
+  [4;35;1mSQL (101.8ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091122122443')[0m
+Migrating to CreateBlockTypes (20091124151333)
+  [4;35;1mSQL (117.9ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124151333')[0m
+Migrating to CreateBlocks (20091124151506)
+  [4;35;1mSQL (96.6ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (17.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124151506')[0m
+Migrating to CreateStageTypes (20091124151914)
+  [4;35;1mSQL (92.9ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124151914')[0m
+Migrating to CreateStages (20091124152021)
+  [4;35;1mSQL (125.5ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124152021')[0m
+Migrating to CreateBlockTypesStageTypes (20091124152553)
+  [4;35;1mSQL (112.4ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124152553')[0m
+Migrating to CreateBlocksStages (20091124153147)
+  [4;35;1mSQL (172.4ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124153147')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `block_types`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `block_types`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `block_types`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `block_types_stage_types`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `block_types_stage_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `block_types_stage_types`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `blocks`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `blocks`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `blocks`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `blocks_stages`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `blocks_stages`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `blocks_stages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `projects`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `projects`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `stage_types`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `stage_types`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `stage_types`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `stages`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `stages`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `stages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (18.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.4ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (120.8ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (89.2ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (87.3ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (89.1ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (90.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (103.1ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mBlockTypeStageType Load (0.2ms)[0m   [0;1mSELECT * FROM `block_types_stage_types` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (412.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (93.4ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (164.9ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.5ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (87.9ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (121.6ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (88.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (125.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (12.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (83.1ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (234.5ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (88.3ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.7ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (100.3ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (111.0ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (140.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (151.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (10.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (73.8ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (207.5ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.7ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (103.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (9.4ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (59.9ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (121.5ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.6ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.5ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (92.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (66.1ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.1ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (101.3ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.1ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.8ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (103.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (9.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (58.2ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (120.8ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.7ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.7ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (100.8ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (103.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (55.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (177.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20091122122443)
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091122122443')[0m
+Migrating to CreateBlockTypes (20091124151333)
+  [4;35;1mSQL (98.8ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124151333')[0m
+Migrating to CreateBlocks (20091124151506)
+  [4;35;1mSQL (98.2ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124151506')[0m
+Migrating to CreateStageTypes (20091124151914)
+  [4;35;1mSQL (84.7ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124151914')[0m
+Migrating to CreateStages (20091124152021)
+  [4;35;1mSQL (108.3ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124152021')[0m
+Migrating to CreateBlockTypesStageTypes (20091124152553)
+  [4;35;1mSQL (97.4ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124152553')[0m
+Migrating to CreateBlocksStages (20091124153147)
+  [4;35;1mSQL (97.3ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091124153147')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `block_types`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `block_types`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `block_types`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `block_types_stage_types`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `block_types_stage_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `block_types_stage_types`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `blocks`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `blocks`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `blocks`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `blocks_stages`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `blocks_stages`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `blocks_stages`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `projects`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `projects`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `stage_types`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `stage_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `stage_types`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `stages`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `stages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `stages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `block_types`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mdescribe `block_types`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `block_types`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `block_types_stage_types`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `block_types_stage_types`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `block_types_stage_types`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `blocks`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `blocks`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `blocks`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `blocks_stages`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `blocks_stages`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `blocks_stages`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `projects`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `projects`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `projects`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `stage_types`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `stage_types`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `stage_types`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `stages`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `stages`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `stages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (8.9ms)[0m   [0;1mDROP DATABASE IF EXISTS `bumblebee_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `bumblebee_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (68.0ms)[0m   [0mCREATE TABLE `block_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (143.7ms)[0m   [0mCREATE TABLE `block_types_stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `stage_type_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.7ms)[0m   [0mCREATE TABLE `blocks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (88.4ms)[0m   [0mCREATE TABLE `blocks_stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `block_id` int(11), `stage_id` int(11), `cost` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mCREATE TABLE `stage_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.4ms)[0m   [0mCREATE TABLE `stages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stage_type_id` int(11), `project_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (103.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124153147')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091122122443')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151333')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124151506')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124151914')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091124152021')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091124152553')[0m

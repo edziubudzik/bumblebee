@@ -1,0 +1,9 @@
+<h1>Nowy projekt</h1>
+
+<% form_for :project do |f| %>
+	<%= render :partial => 'form', :locals => { :f => f } %>
+	
+	<p>
+		<input type="submit" value="Utwórz" /> lub <%= link_to 'anuluj', projects_path %>
+	</p>
+<% end %>

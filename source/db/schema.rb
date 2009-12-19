@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091124153147) do
+ActiveRecord::Schema.define(:version => 20091219162939) do
 
   create_table "block_types", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(:version => 20091124153147) do
     t.integer  "block_id"
     t.integer  "stage_id"
     t.integer  "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "eventable_type"
+    t.integer  "eventable_id"
+    t.integer  "type"
+    t.datetime "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

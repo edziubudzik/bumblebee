@@ -1,0 +1,11 @@
+<h1><%= @block.name %></h1>
+
+<%= error_messages_for :block %>
+
+<% form_for @block do |f| %>
+	<%= render :partial => 'form', :locals => { :f => f } %>
+	
+	<p>
+		<input type="submit" value="Zapisz" /> lub <%= link_to 'anuluj', block_path(@block) %>
+	</p>
+<% end %>

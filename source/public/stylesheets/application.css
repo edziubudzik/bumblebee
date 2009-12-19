@@ -1,0 +1,16 @@
+#blocks, #block_types {
+	float: left;
+}
+
+#blocks {
+	min-height: 100px;
+	width: 600px;
+}
+
+#blocks.hover {
+	background-color: pink;
+}
+
+#block_types {
+	width: 300px;
+}

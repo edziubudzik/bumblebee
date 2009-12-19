@@ -32,18 +32,6 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_redirected_to project_path(assigns(:project))
   end
   
-  test "should not create project" do
-    assert_no_difference('Project.count') do
-      post :create, :post => { :name => '' }
-    end
-    
-    assert_no_difference('Project.count') do
-      post :create, :post => { :name => 'Za długa nazwa projektu. 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111 1111111111' }
-    end
-    
-    assert_template "new"
-  end
-  
   test "should get edit" do
     project = Project.create(:name => 'Projekt 1')
     

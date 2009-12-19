@@ -6688,3 +6688,1534 @@ Processing ProjectsController#update (for 0.0.0.0 at 2009-12-19 18:57:51) [PUT]
 Redirected to http://test.host/projects/2053932845
 Completed in 3ms (DB: 1) | 302 Found [http://test.host/projects/2053932845?project%5Bname%5D=Project+2]
   [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/projects_controller_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/projects_controller_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2009-12-19 18:59:24) [POST]
+  Parameters: {"project"=>{"name"=>"Testowy projekt"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Testowy projekt', '2009-12-19 17:59:24', '2009-12-19 17:59:24')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932846
+Completed in 6ms (DB: 22) | 302 Found [http://test.host/projects?project%5Bname%5D=Testowy+projekt]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 3', '2009-12-19 17:59:24', '2009-12-19 17:59:24')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2009-12-19 18:59:24) [DELETE]
+  Parameters: {"id"=>"2053932847"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932847) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Destroy (0.1ms)[0m   [0;1mDELETE FROM `projects` WHERE `id` = 2053932847[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects
+Completed in 2ms (DB: 47) | 302 Found [http://test.host/projects/2053932847]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 17:59:24', '2009-12-19 17:59:24')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2009-12-19 18:59:24) [GET]
+  Parameters: {"id"=>"2053932848"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932848) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Rendered projects/_form (1.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects/2053932848/edit]
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2009-12-19 18:59:24) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2009-12-19 18:59:24) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_form (0.6ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 17:59:24', '2009-12-19 17:59:24')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2009-12-19 18:59:24) [GET]
+  Parameters: {"id"=>"2053932849"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932849) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/2053932849]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 17:59:24', '2009-12-19 17:59:24')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2009-12-19 18:59:24) [PUT]
+  Parameters: {"project"=>{"name"=>"Project 2"}, "id"=>"2053932850"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932850) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Update (0.2ms)[0m   [0mUPDATE `projects` SET `updated_at` = '2009-12-19 17:59:24', `name` = 'Project 2' WHERE `id` = 2053932850[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932850
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/projects/2053932850?project%5Bname%5D=Project+2]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/stage_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/stage_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:30:18', '2009-12-19 18:30:18')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:32:08', '2009-12-19 18:32:08')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:08', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:10', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:10', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:10', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:10', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:10', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:10', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:10', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:11', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:11', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:11', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:11', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:11', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:12', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:12', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:12', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:12', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:13', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:13', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:13', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:13', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:14', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:14', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:14', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:15', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:15', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:15', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:16', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:16', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:16', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:17', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:17', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:18', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:18', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:19', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:19', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:20', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:20', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.3ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:21', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:21', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:22', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:22', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:23', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:23', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:24', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:25', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:25', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:26', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:27', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:27', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:28', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:29', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:30', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:31', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:32', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:33', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:34', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:35', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.4ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:36', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:08' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (52.9ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/helpers/projects_helper_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/helpers/projects_helper_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2009-12-19 19:32:42) [POST]
+  Parameters: {"project"=>{"name"=>"Testowy projekt"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Testowy projekt', '2009-12-19 18:32:42', '2009-12-19 18:32:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932851
+Completed in 4ms (DB: 25) | 302 Found [http://test.host/projects?project%5Bname%5D=Testowy+projekt]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 3', '2009-12-19 18:32:42', '2009-12-19 18:32:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2009-12-19 19:32:42) [DELETE]
+  Parameters: {"id"=>"2053932852"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932852) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Destroy (0.2ms)[0m   [0;1mDELETE FROM `projects` WHERE `id` = 2053932852[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932852]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;35;1mSQL (51.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:32:42', '2009-12-19 18:32:42')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2009-12-19 19:32:42) [GET]
+  Parameters: {"id"=>"2053932853"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932853) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Rendered projects/_form (0.9ms)
+Completed in 6ms (View: 5, DB: 53) | 200 OK [http://test.host/projects/2053932853/edit]
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2009-12-19 19:32:42) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2009-12-19 19:32:42) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_form (0.6ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:32:42', '2009-12-19 18:32:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2009-12-19 19:32:42) [GET]
+  Parameters: {"id"=>"2053932854"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932854) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/2053932854]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:32:42', '2009-12-19 18:32:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2009-12-19 19:32:42) [PUT]
+  Parameters: {"id"=>"2053932855", "project"=>{"name"=>"Project 2"}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932855) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Update (0.2ms)[0m   [0mUPDATE `projects` SET `updated_at` = '2009-12-19 18:32:42', `name` = 'Project 2' WHERE `id` = 2053932855[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932855
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/projects/2053932855?project%5Bname%5D=Project+2]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:32:42', '2009-12-19 18:32:42')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:32:42', `name` = 'Etap 1', `created_at` = '2009-12-19 18:32:42' WHERE `id` = 2053932788[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/projects_controller_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/functional/projects_controller_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2009-12-19 19:33:49) [POST]
+  Parameters: {"project"=>{"name"=>"Testowy projekt"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Testowy projekt', '2009-12-19 18:33:49', '2009-12-19 18:33:49')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932856
+Completed in 4ms (DB: 71) | 302 Found [http://test.host/projects?project%5Bname%5D=Testowy+projekt]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 3', '2009-12-19 18:33:49', '2009-12-19 18:33:49')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2009-12-19 19:33:49) [DELETE]
+  Parameters: {"id"=>"2053932857"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932857) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Destroy (0.2ms)[0m   [0;1mDELETE FROM `projects` WHERE `id` = 2053932857[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932857]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:33:49', '2009-12-19 18:33:49')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2009-12-19 19:33:49) [GET]
+  Parameters: {"id"=>"2053932858"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932858) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Rendered projects/_form (1.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects/2053932858/edit]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2009-12-19 19:33:49) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2009-12-19 19:33:49) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_form (0.6ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:33:49', '2009-12-19 18:33:49')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2009-12-19 19:33:49) [GET]
+  Parameters: {"id"=>"2053932859"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932859) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/2053932859]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:33:49', '2009-12-19 18:33:49')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2009-12-19 19:33:49) [PUT]
+  Parameters: {"project"=>{"name"=>"Project 2"}, "id"=>"2053932860"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932860) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Update (0.2ms)[0m   [0mUPDATE `projects` SET `updated_at` = '2009-12-19 18:33:49', `name` = 'Project 2' WHERE `id` = 2053932860[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932860
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932860?project%5Bname%5D=Project+2]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:33:49', '2009-12-19 18:33:49')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:33:49', `name` = 'Etap 1', `created_at` = '2009-12-19 18:33:49' WHERE `id` = 2053932789[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.3ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:34:56', '2009-12-19 18:34:56')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:34:56', `name` = 'Etap 1', `created_at` = '2009-12-19 18:34:56' WHERE `id` = 2053932790[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:35:45', '2009-12-19 18:35:45')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:35:45', `name` = 'Etap 1', `created_at` = '2009-12-19 18:35:45' WHERE `id` = 2053932791[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:35:57', '2009-12-19 18:35:57')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:35:57', `name` = 'Etap 1', `created_at` = '2009-12-19 18:35:57' WHERE `id` = 2053932792[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `created_at`, `updated_at`) VALUES('Etap 1', '2009-12-19 18:36:26', '2009-12-19 18:36:26')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:36:26', `name` = 'Etap 1', `created_at` = '2009-12-19 18:36:26' WHERE `id` = 2053932793[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/block_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/block_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2009-12-19 19:37:09) [POST]
+  Parameters: {"project"=>{"name"=>"Testowy projekt"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Testowy projekt', '2009-12-19 18:37:09', '2009-12-19 18:37:09')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932786
+Completed in 4ms (DB: 26) | 302 Found [http://test.host/projects?project%5Bname%5D=Testowy+projekt]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 3', '2009-12-19 18:37:09', '2009-12-19 18:37:09')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2009-12-19 19:37:09) [DELETE]
+  Parameters: {"id"=>"2053932787"}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932787) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Destroy (0.2ms)[0m   [0;1mDELETE FROM `projects` WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932787]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:37:09', '2009-12-19 18:37:09')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2009-12-19 19:37:09) [GET]
+  Parameters: {"id"=>"2053932788"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932788) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Rendered projects/_form (1.0ms)
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://test.host/projects/2053932788/edit]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2009-12-19 19:37:09) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2009-12-19 19:37:09) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_form (0.6ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:37:09', '2009-12-19 18:37:09')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2009-12-19 19:37:09) [GET]
+  Parameters: {"id"=>"2053932789"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932789) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/2053932789]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:37:09', '2009-12-19 18:37:09')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2009-12-19 19:37:09) [PUT]
+  Parameters: {"id"=>"2053932790", "project"=>{"name"=>"Project 2"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932790) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Update (0.2ms)[0m   [0mUPDATE `projects` SET `updated_at` = '2009-12-19 18:37:09', `name` = 'Project 2' WHERE `id` = 2053932790[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932790
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932790?project%5Bname%5D=Project+2]
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `position`, `created_at`, `updated_at`) VALUES('Etap 1', NULL, '2009-12-19 18:37:09', '2009-12-19 18:37:09')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:37:09', `name` = 'Etap 1', `created_at` = '2009-12-19 18:37:09' WHERE `id` = 2053932786[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (10.7ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/block_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/block_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2009-12-19 19:37:47) [POST]
+  Parameters: {"project"=>{"name"=>"Testowy projekt"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Testowy projekt', '2009-12-19 18:37:47', '2009-12-19 18:37:47')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932791
+Completed in 4ms (DB: 386) | 302 Found [http://test.host/projects?project%5Bname%5D=Testowy+projekt]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 3', '2009-12-19 18:37:47', '2009-12-19 18:37:47')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2009-12-19 19:37:47) [DELETE]
+  Parameters: {"id"=>"2053932792"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932792) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Destroy (0.1ms)[0m   [0;1mDELETE FROM `projects` WHERE `id` = 2053932792[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932792]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:37:47', '2009-12-19 18:37:47')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2009-12-19 19:37:47) [GET]
+  Parameters: {"id"=>"2053932793"}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932793) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Rendered projects/_form (1.0ms)
+Completed in 7ms (View: 5, DB: 2) | 200 OK [http://test.host/projects/2053932793/edit]
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2009-12-19 19:37:47) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2009-12-19 19:37:47) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_form (0.5ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:37:47', '2009-12-19 18:37:47')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2009-12-19 19:37:47) [GET]
+  Parameters: {"id"=>"2053932794"}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932794) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/2053932794]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:37:47', '2009-12-19 18:37:47')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2009-12-19 19:37:47) [PUT]
+  Parameters: {"id"=>"2053932795", "project"=>{"name"=>"Project 2"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932795) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Update (0.2ms)[0m   [0mUPDATE `projects` SET `updated_at` = '2009-12-19 18:37:47', `name` = 'Project 2' WHERE `id` = 2053932795[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932795
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/projects/2053932795?project%5Bname%5D=Project+2]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mStageType Create (0.2ms)[0m   [0;1mINSERT INTO `stage_types` (`name`, `position`, `created_at`, `updated_at`) VALUES('Etap 1', NULL, '2009-12-19 18:37:47', '2009-12-19 18:37:47')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mStageType Update (0.2ms)[0m   [0;1mUPDATE `stage_types` SET `updated_at` = '2009-12-19 18:37:47', `name` = 'Etap 1', `created_at` = '2009-12-19 18:37:47' WHERE `id` = 2053932787[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mStageType Create (0.2ms)[0m   [0mINSERT INTO `stage_types` (`name`, `position`, `created_at`, `updated_at`) VALUES('Etap 1', NULL, '2009-12-19 18:38:22', '2009-12-19 18:38:22')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mStageType Create (0.2ms)[0m   [0mINSERT INTO `stage_types` (`name`, `position`, `created_at`, `updated_at`) VALUES('Etap 1', NULL, '2009-12-19 18:38:48', '2009-12-19 18:38:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+test/unit/stage_type_test.rb:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mStageType Create (0.2ms)[0m   [0mINSERT INTO `stage_types` (`name`, `position`, `created_at`, `updated_at`) VALUES('Etap 1', 3, '2009-12-19 18:38:58', '2009-12-19 18:38:58')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+Unable to load block_types_stage_type, underlying cause no such file to load -- block_types_stage_type 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/block_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+Unable to load blocks_stage, underlying cause no such file to load -- blocks_stage 
+
+ /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./test/test_helper.rb:35
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./test/unit/block_type_test.rb:1
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+-e:1
+-e:1:in `each'
+-e:1
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2009-12-19 19:39:00) [POST]
+  Parameters: {"project"=>{"name"=>"Testowy projekt"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Testowy projekt', '2009-12-19 18:39:00', '2009-12-19 18:39:00')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932796
+Completed in 4ms (DB: 26) | 302 Found [http://test.host/projects?project%5Bname%5D=Testowy+projekt]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 3', '2009-12-19 18:39:00', '2009-12-19 18:39:00')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `projects` [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2009-12-19 19:39:00) [DELETE]
+  Parameters: {"id"=>"2053932797"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932797) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Destroy (0.2ms)[0m   [0;1mDELETE FROM `projects` WHERE `id` = 2053932797[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932797]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `projects` [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:39:00', '2009-12-19 18:39:00')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2009-12-19 19:39:00) [GET]
+  Parameters: {"id"=>"2053932798"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932798) [0m
+Rendering template within layouts/application
+Rendering projects/edit
+Rendered projects/_form (1.0ms)
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://test.host/projects/2053932798/edit]
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2009-12-19 19:39:00) [GET]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` [0m
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/projects]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2009-12-19 19:39:00) [GET]
+Rendering template within layouts/application
+Rendering projects/new
+Rendered projects/_form (0.5ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:39:00', '2009-12-19 18:39:00')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2009-12-19 19:39:00) [GET]
+  Parameters: {"id"=>"2053932799"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932799) [0m
+Rendering template within layouts/application
+Rendering projects/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/2053932799]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Create (0.2ms)[0m   [0mINSERT INTO `projects` (`name`, `created_at`, `updated_at`) VALUES('Projekt 1', '2009-12-19 18:39:00', '2009-12-19 18:39:00')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2009-12-19 19:39:00) [PUT]
+  Parameters: {"id"=>"2053932800", "project"=>{"name"=>"Project 2"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2053932800) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProject Update (0.2ms)[0m   [0mUPDATE `projects` SET `updated_at` = '2009-12-19 18:39:00', `name` = 'Project 2' WHERE `id` = 2053932800[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/2053932800
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/2053932800?project%5Bname%5D=Project+2]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;35;1mStageType Create (0.2ms)[0m   [0mINSERT INTO `stage_types` (`name`, `position`, `created_at`, `updated_at`) VALUES('Etap 1', 3, '2009-12-19 18:39:00', '2009-12-19 18:39:00')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `stage_types` [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m

@@ -1,0 +1,26 @@
+!!! xml
+!!! strict
+%html{html_attrs('pl-pl')}
+	%head
+		%meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+
+		%title Bumblebee
+		
+		%link{:href => '/stylesheets/application.css', :rel => "stylesheet", :type => "text/css"}
+		= javascript_include_tag :defaults
+		
+	%body
+	
+		#header
+		
+		#container
+		
+			#main
+				#notice= flash[:notice]
+
+				#content
+					= yield
+				
+			#sidebar
+			
+		#footer

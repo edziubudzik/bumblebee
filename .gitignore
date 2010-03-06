@@ -1,3 +1,4 @@
 source/log/*
 source/tmp/sass-cache/*
 source/public/stylesheets/application.css
+source/db/schema.rb

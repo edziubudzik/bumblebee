@@ -11,6 +11,8 @@ class Project < ActiveRecord::Base
     event_ids = [ ]
     event_ids<<stages.collect { |s| s.event_ids }
   
-    event_ids.flatten.join(',')
+    event_ids.flatten!
+  
+    event_ids.empty? ? "0" : event_ids.join(',')  
   end
 end

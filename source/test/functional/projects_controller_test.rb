@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
+  fixtures :stage_types
+  
   # Wyświetlanie listy projektów
   test "should get index" do
     get :index
@@ -9,7 +11,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
   
   test "should get show" do
-    project = Project.create(:name => 'Projekt 1')
+    project = Factory(:project)
     
     get :show, :id => project.id
     assert_response :success
@@ -20,6 +22,22 @@ class ProjectsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
     assert_not_nil assigns(:project)
+  end
+  
+  test "should get events XML" do
+    project = Factory(:project)
+    
+    stage_one = Factory.create(:stage, :stage_type_id => stage_types(:one).id)
+
+    stage_one.events<<Factory.build(:event, :time => Time.now)
+    stage_one.events<<Factory.build(:event, :time => Time.now + 2.days)
+    
+    project.stages<<stage_one
+    
+    get :events, :id => project.id, :format => "xml"
+    assert_response :success
+    assert_not_nil assigns(:project)
+    assert_equal assigns(:project).events.size, 2
   end
   
   test "should create project" do
@@ -33,7 +51,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
   
   test "should get edit" do
-    project = Project.create(:name => 'Projekt 1')
+    project = Factory(:project)
     
     get :edit, :id => project.id
     assert_response :success
@@ -41,8 +59,8 @@ class ProjectsControllerTest < ActionController::TestCase
   end
   
   test "should update project" do
-    new_name = 'Project 2'
-    project = Project.create(:name => 'Projekt 1')
+    project = Factory(:project)
+    new_name = project.name + " test"
     
     put :update, {:id => project.id, :project => { :name => new_name } }
     

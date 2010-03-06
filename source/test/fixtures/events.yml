@@ -3,11 +3,9 @@
 one:
   eventable_type: MyString
   eventable_id: 1
-  type: 1
   time: 2009-12-19 17:29:39
 
 two:
   eventable_type: MyString
   eventable_id: 1
-  type: 1
   time: 2009-12-19 17:29:39

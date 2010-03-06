@@ -1,7 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  name: Stage One
 
 two:
-  name: MyString
+  name: Stage Two
+
+three:
+  name: Stage Three
+  
+four:
+  name: Stage Four

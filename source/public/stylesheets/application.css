@@ -30,11 +30,15 @@ body {
   height: 200px;
   margin: -10px;
   margin-bottom: 10px;
-  background-color: pink;
+  background-color: grey;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   padding: 10px; }
+  #timeline .canvas {
+    height: 100%;
+    width: 100%;
+    background-color: white; }
 
 #footer {
   border-top: 5px solid grey; }

@@ -1,0 +1,22 @@
+!!! xml
+!!! frameset
+%html{html_attrs('pl-pl')}
+	%head
+		%meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+
+		%title Bumblebee
+	
+		%link{:href => '/stylesheets/application.css', :rel => "stylesheet", :type => "text/css"}
+		%link{:href => '/stylesheets/demo_browser.css', :rel => "stylesheet", :type => "text/css"}
+		
+		= javascript_include_tag :defaults, "jester.js", "demo_browser"
+		
+		:javascript
+			document.observe('dom:loaded', function() {
+				Bumblebee.DemoBrowser.init('#{@demo.project.id}', '#{@demo.id}');
+			})
+			
+	%body#demo_browser
+		#tools= yield
+		
+		%iframe#content{:src => @demo.url, :scrolling => true, :frameborder => 0}

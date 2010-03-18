@@ -1,0 +1,21 @@
+%table.form
+	%tr
+		%td.label= f.label :name, 'Tytuł:'
+		%td= f.text_field :name
+		%td= f.error_message_on :name
+		
+	%tr
+		%td.label= f.label :url, 'Adres URL:'
+		%td= f.text_field :url
+		%td= f.error_message_on :url
+		
+	%tr
+		%td.label= f.label :description, 'Opis:'
+		%td= f.text_area :description
+		%td= f.error_message_on :description
+		
+	- fields_for "project[event]", @demo.event || @demo.build_event do |ef|
+		%tr
+			%td.label= ef.label :time, 'Publikuj od:'
+			%td= ef.date_select :time
+			%td= ef.error_message_on :time

@@ -1,0 +1,11 @@
+%h1 Nowe demo
+
+= error_messages_for :demo
+
+- form_for [@project, @demo] do |f|
+	= render :partial => 'form', :locals => { :f => f }
+	
+	%p
+		%input{ :type => "submit", :value => "Utwórz" }/
+		lub 
+		%a= link_to 'anuluj', project_demos_path(@project)

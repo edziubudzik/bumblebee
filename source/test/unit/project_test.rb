@@ -11,7 +11,7 @@ class ProjectTest < ActiveSupport::TestCase
     assert !project_with_too_long_name.save, "Zapisano projekt ze zbyt długą nazwą"
   end
   
-  test "should return events of its stages" do
+  test "should return events of its stages and demos" do
     project = Factory.create(:project)
     
     stage_one = Factory.create(:stage, :stage_type_id => stage_types(:one).id)
@@ -26,10 +26,14 @@ class ProjectTest < ActiveSupport::TestCase
     project.stages<<stage_one
     project.stages<<stage_two
     
-    assert_equal project.events.size, 4
-    assert project.events[0].time < project.events[1].time &&
-      project.events[1].time < project.events[2].time &&
-      project.events[2].time < project.events[3].time, 
-      "Błędna kolejność wydarzeń"
+    demo = Factory(:demo)
+    project.demos<<demo
+
+    assert_equal project.events.size, 5
+    assert project.events[0].time <= project.events[1].time &&
+      project.events[1].time <= project.events[2].time &&
+      project.events[2].time <= project.events[3].time &&
+      project.events[3].time <= project.events[4].time, 
+      "Błędna kolejność wydarz=eń"
   end
 end

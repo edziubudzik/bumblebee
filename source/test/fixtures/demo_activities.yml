@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  demo_id: 1
+  url: MyString
+  method: MyString
+
+two:
+  demo_id: 1
+  url: MyString
+  method: MyString

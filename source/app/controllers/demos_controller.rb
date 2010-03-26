@@ -8,7 +8,7 @@ class DemosController < ApplicationController
     @demo = object
     
     respond_to do |format|
-      format.html { render :action => :browse, :layout => "demo_browser" }
+      format.html { render :action => :browse }
     end
   end
 end

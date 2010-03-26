@@ -1,0 +1,5 @@
+%h1 Przeglądanie wersji demonstracyjnej
+%h2= @demo.project.name
+
+:javascript
+	window.open('#{@demo.url}#{@demo.url.index("?") ? "&" : "?"}_bumblebee_enabled=1');

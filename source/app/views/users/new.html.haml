@@ -1,0 +1,7 @@
+%h1 Rejestracja
+
+- form_for @user do |f|
+	= render :partial => "form", :locals => { :f => f }
+	
+%p
+	%input{ :type => "submit", :value => "Zarejestruj" }

@@ -1,0 +1,15 @@
+%h1 Logowanie
+
+- form_for @user_session do |f|
+	%table.form
+		%tr
+			%td.label= f.label :email, 'Email:'
+			%td= f.text_field :email
+			%td= f.error_message_on :email
+		
+		%tr
+			%td.label= f.label :password, 'Hasło:'
+			%td= f.password_field :password
+			%td= f.error_message_on :password
+			
+	%input{ :type => "submit", :value => "Zaloguj" }

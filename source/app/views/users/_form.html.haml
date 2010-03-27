@@ -1,0 +1,15 @@
+%table.form
+	%tr
+		%td.label= f.label :email, 'Email:'
+		%td= f.text_field :email
+		%td= f.error_message_on :email
+		
+	%tr
+		%td.label= f.label :password, 'Hasło:'
+		%td= f.password_field :password
+		%td= f.error_message_on :password
+		
+	%tr
+		%td.label= f.label :password_confirmation, 'Potwierdź hasło:'
+		%td= f.password_field :password_confirmation
+		%td= f.error_message_on :password_confirmation

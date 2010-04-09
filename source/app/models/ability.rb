@@ -14,7 +14,7 @@ class Ability
       end
       
       if user.has_role? :admin
-        can :all, [Block, BlockType, Demo, DemoActivity, Event, Project, Stage, StageType, User]
+        can :manage, :all
       end
     end
   end

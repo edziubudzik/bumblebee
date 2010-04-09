@@ -9,5 +9,8 @@ class DemoActivitiesController < ApplicationController
   
   create.wants.html { redirect_to project_demo_demo_activity_url(:project_id => @demo.project.id, :demo_id => @demo.id, :id => @demo_activity)}
   
-  # create.wants.html { render nil }
+  create.after do
+    object.user = current_user
+    object.save
+  end
 end

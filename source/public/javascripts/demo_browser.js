@@ -24,18 +24,7 @@ Bumblebee.DemoBrowser = {
 			// alert('Bumblebee browsing inactive.')
 			return false;
 		}
-		
-		// Jester.Resource.model('Demo', { prefix: '/projects/' + projectId });
 
-		// this.demo = Demo.find(demoId);
-		// 
-		// Jester.Resource.model('DemoActivity', {
-		// 	prefix: '/projects/' + projectId + '/demos/' + this.demo.id + '/', 
-		// 	singular: 'demo_activity', 
-		// 	plural: 'demo_activities'
-		// });
-		// 
-		// this.content = $('content');
 		
 		this.submitTarget = new Element('iframe', {
 			name: 'bumblebee_submit_target'
@@ -78,23 +67,16 @@ Bumblebee.DemoBrowser = {
 	},
 	
 	onContentLinkClicked: function(event) {
+		event.stop();
 		var a = event.findElement('a');
 		
 		this.submitActivity(a.href, 'get');
-		// this.demo.create_demo_activity({ 
-		// 	url: a.href,
-		// 	method: "get"
-		// })
 	},
 	
 	onFormSubmittedClicked: function(event) {
 		var form = event.findElement('form');
 		
 		this.submitActivity(form.action, form.method);
-		// this.demo.create_demo_activity({ 
-		// 	url: form.action,
-		// 	method: form.method
-		// })
 	},
 	
 	submitActivity: function(url, method) {

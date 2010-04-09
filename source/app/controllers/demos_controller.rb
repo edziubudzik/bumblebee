@@ -2,6 +2,8 @@ class DemosController < ApplicationController
   resource_controller
   belongs_to :project
   
+  load_and_authorize_resource
+  
   show.wants.xml { render :xml => @demo }
   
   def browse

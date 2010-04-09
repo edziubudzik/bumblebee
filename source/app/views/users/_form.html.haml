@@ -13,3 +13,13 @@
 		%td.label= f.label :password_confirmation, 'Potwierdź hasło:'
 		%td= f.password_field :password_confirmation
 		%td= f.error_message_on :password_confirmation
+		
+	%tr
+		%td.label= f.label :roles, 'Role:'
+		%td
+			- for role in User::ROLES
+				= check_box_tag "user[roles][]", role, @user.has_role?(role)
+				= role.humanize
+				%br/
+			= hidden_field_tag "user[roles][]", ""
+		%td= f.error_message_on :roles

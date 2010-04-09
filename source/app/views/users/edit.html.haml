@@ -1,0 +1,7 @@
+%h1 Ustawienia konta
+
+- form_for @user, :url => account_url do |f|
+	= render :partial => "form", :locals => { :f => f }
+	
+	%p
+		%input{ :type => "submit", :value => "Zapisz" }

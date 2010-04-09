@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
     @project = object
     
     respond_to do |format|
-      format.xml { render :xml => @project.events}
+      format.xml { render :xml => @project.events }
     end
   end
 end

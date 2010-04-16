@@ -12,6 +12,21 @@
 	%body
 	
 		#header
+			%a#logo
+				Bumble
+				%strong> bee
+			#user_panel
+				- if current_user
+					.user
+						= current_user.email
+						= " (" + link_to("wyloguj", logout_path) + ")"
+					- if @project
+						.project= @project.name
+				- else
+					.login
+						= link_to "Zaloguj się", login_path
+						lub
+						= link_to "utwórz nowe konto", new_user_path
 		
 		#container
 		
@@ -24,3 +39,4 @@
 			#sidebar
 			
 		#footer
+			.copyrights Projekt Bumblebee został przygotowany jako część dwóch prac magisterskich (Mateusza Gurgula i Piotra Batora) napisanych na&nbsp;Uniwersytecie Jagiellońskim pod kierunkiem prof. Mariusza Flasińskiego.

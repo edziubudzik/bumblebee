@@ -55,6 +55,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :block_types
   
+  map.root :controller => "users", :action => "show"
+  
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

@@ -1,5 +1,7 @@
 source/log/*
 source/tmp/sass-cache/*
 source/public/stylesheets/application.css
+source/public/stylesheets/demo_browser.css
+source/public/stylesheets/popup.css
 source/db/schema.rb
 source/db/development_structure.sql

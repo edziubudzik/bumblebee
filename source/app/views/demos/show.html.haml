@@ -3,3 +3,19 @@
 %p= link_to @demo.url, browse_project_demo_path(@project, @demo)
 
 %p= @demo.description
+
+%h2 Aktywność
+
+%ul#activity
+	- for activity in @demo.all_activities
+		%li
+			- if activity.is_a? DemoActivity
+				= link_to activity.user.email, user_path(activity.user)
+				wyświetlił
+				= activity.url
+				= activity.created_at
+			- elsif activity.is_a? BugReport
+				= link_to activity.user.email, user_path(activity.user)
+				zgłosił błąd na stronie
+				= activity.url
+				= activity.created_at

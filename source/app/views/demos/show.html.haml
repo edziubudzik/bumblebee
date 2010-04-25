@@ -1,3 +1,12 @@
+%ul#back
+	%li= link_to "« powrót do projektu", project_path(@project)
+
+%ul#links
+	- if can? :update, @demo
+		%li= link_to "edytuj", edit_project_demo_path(@project, @demo)
+	- if can? :destroy, @demo
+		%li= link_to "usuń", project_demo_path(@project, @demo), :confirm => "Czy na pewno chcesz usunąć tę wersję demo?", :method => :delete
+
 %h1= @demo.name
 
 %p= link_to @demo.url, browse_project_demo_path(@project, @demo)

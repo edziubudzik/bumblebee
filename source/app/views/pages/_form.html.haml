@@ -1,4 +1,6 @@
 %table.form
+	= hidden_field_tag "page[user_id]", current_user.id
+	
 	%tr
 		%td.label= f.label :title, 'Tytuł:'
 		%td= f.text_field :title

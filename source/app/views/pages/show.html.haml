@@ -11,6 +11,18 @@
 
 %p= @page.content
 
-%p
-	Wersja
-	= @page.version
+%h3 Wersje
+
+%ul#versions
+	- for version in @page.versions.reverse
+		%li
+			- if version.number != @page.version
+				= link_to "#{version.number} przez #{version.versioned.user.email} #{version.created_at}", :version => version.number
+			- else
+				= "#{version.number} przez #{version.versioned.user.email} #{version.created_at}"
+	%li
+		- if @page.version > 1
+			= link_to "1 przez #{@page.user.email} #{@page.created_at}", :version => 1
+		- else
+			= "1 przez #{@page.user.email} #{@page.created_at}"
+	

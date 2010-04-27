@@ -1,0 +1,11 @@
+%h1= @page.title
+
+= error_messages_for :page
+
+- form_for [@project, @page] do |f|
+	= render :partial => 'form', :locals => { :f => f }
+	
+	%p
+		%input{ :type => "submit", :value => "Zapisz" }/
+		lub 
+		%a= link_to 'anuluj', project_page_path(@project, @page)

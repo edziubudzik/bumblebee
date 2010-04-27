@@ -1,0 +1,16 @@
+%ul#back
+	%li= link_to "« powrót do projektu", project_path(@project)
+
+%ul#links
+	- if can? :update, @page
+		%li= link_to "edytuj", edit_project_page_path(@project, @page)
+	- if can? :destroy, @page
+		%li= link_to "usuń", project_page_path(@project, @page), :confirm => "Czy na pewno chcesz usunąć tę stronę?", :method => :delete
+
+%h1= @page.title
+
+%p= @page.content
+
+%p
+	Wersja
+	= @page.version

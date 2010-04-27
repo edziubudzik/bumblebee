@@ -48,6 +48,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :projects, :member => { :events => :get } do |project|
     project.resources :blocks
+    project.resources :pages
     project.resources :demos, :member => { :browse => :get } do |demo|
       demo.resources :demo_activities
       demo.resources :bug_reports

@@ -42,4 +42,5 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "authlogic"
   config.gem "cancan"
+  config.gem 'vestal_versions'
 end

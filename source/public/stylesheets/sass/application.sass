@@ -56,9 +56,24 @@ a#logo
 	background-image: url(/images/content_bg.gif)
 	background-position: -5px 0
 	+spacing
+	
+#sidebar
+	position: absolute
+	right: 20px
+	left: 70%
+	margin-left: 40px
+	float: left
+	background-color: black
+	color: white
+	+spacing
+	+rounded-corners
+	
+	a
+		color= !yellow
 
 #main
 	position: relative
+	float: left
 	width: 70%
 	background-color: white
 	+spacing
@@ -113,9 +128,7 @@ a#logo
 	padding: 0
 	padding-left: 5px
 	background-color: #aaa
-	border-top-left-radius: 10px
-	-webkit-border-top-left-radius: 10px
-	-moz-border-radius-topleft: 10px
+	+rounded-top-left-corner
 	
 	li
 		float: left
@@ -141,9 +154,7 @@ a#logo
 	padding: 0
 	padding-right: 5px
 	background-color: #aaa
-	border-top-right-radius: 10px
-	-webkit-border-top-right-radius: 10px
-	-moz-border-radius-topright: 10px
+	+rounded-top-right-corner
 	
 	li
 		float: left
@@ -159,3 +170,6 @@ a#logo
 	a:hover
 		text-decoration: none
 		color= !yellow
+		
+.clear
+	clear: both

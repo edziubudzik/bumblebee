@@ -1,3 +1,5 @@
+- render :partial => "sidebar"
+
 %ul#links
 	- if can? :crete, Demo
 		%li= link_to "dodaj demo", new_project_demo_path(@project)

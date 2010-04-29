@@ -1,11 +1,9 @@
 <h1>Nowy klocek</h1>
+<br />
 
-<%= error_messages_for :block %>
-
-<% form_for [@project, @block] do |f| %>
-	<%= render :partial => 'form', :locals => { :f => f } %>
-	
-	<p>
-		<input type="submit" value="Utwórz" /> lub <%= link_to 'anuluj', project_blocks_path(@project) %>
-	</p>
+<% form_tag :action => 'create_block' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Create" %>
 <% end %>
+
+<br />

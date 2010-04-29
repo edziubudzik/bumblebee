@@ -1,3 +1,8 @@
-<table class="form">
+<%= error_messages_for 'block' %>
 
+<table class="form">
+	<tr>
+	  <td class="label"><label for="block_block_type_id">Block type id</label></td>
+	  <td><%= text_field 'block', 'block_type_id' %></td>
+	</tr>
 </table>

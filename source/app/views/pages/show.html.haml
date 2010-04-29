@@ -1,0 +1,30 @@
+- render :partial => "projects/sidebar"
+
+%ul#back
+	%li= link_to "« powrót do projektu", project_path(@project)
+
+%ul#links
+	- if can? :update, @page
+		%li= link_to "edytuj", edit_project_page_path(@project, @page)
+	- if can? :destroy, @page
+		%li= link_to "usuń", project_page_path(@project, @page), :confirm => "Czy na pewno chcesz usunąć tę stronę?", :method => :delete
+
+%h1= @page.title
+
+%p= @page.content
+
+%h3 Wersje
+
+%ul#versions
+	- for version in @page.versions.reverse
+		%li
+			- if version.number != @page.version
+				= link_to "#{version.number} przez #{version.versioned.user.email} #{version.created_at}", :version => version.number
+			- else
+				= "#{version.number} przez #{version.versioned.user.email} #{version.created_at}"
+	%li
+		- if @page.version > 1
+			= link_to "1 przez #{@page.user.email} #{@page.created_at}", :version => 1
+		- else
+			= "1 przez #{@page.user.email} #{@page.created_at}"
+	

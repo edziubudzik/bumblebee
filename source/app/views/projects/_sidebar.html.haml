@@ -1,0 +1,8 @@
+- content_for :sidebar do
+	%h2= @project.name
+	= link_to "Nowa strona", new_project_page_path(@project)
+	
+	%p
+		- for page in @project.pages
+			= link_to page.title, project_page_path(@project, page)
+			%br/

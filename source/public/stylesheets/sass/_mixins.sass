@@ -1,7 +1,27 @@
 =spacing
 	padding: 10px
 	
+=opacity(!value)
+	:opacity= !value
+	:filter alpha(opacity=#{!value * 100})
+	:-ms-filter "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{!value*100})"
+	
 =rounded-corners(!size=10px)
 	border-radius = !size
 	-webkit-border-radius = !size
 	-moz-border-radius = !size
+	
+=rounded-top-left-corner(!size=10px)
+	border-top-left-radius = !size
+	-webkit-border-top-left-radius = !size
+	-moz-border-radius-topleft = !size
+	
+=rounded-top-right-corner(!size=10px)
+	border-top-right-radius = !size
+	-webkit-border-top-right-radius = !size
+	-moz-border-radius-topright = !size
+	
+=rounded-bottom-right-corner(!size=10px)
+	border-bottom-right-radius = !size
+	-webkit-border-bottom-right-radius = !size
+	-moz-border-radius-bottomright = !size

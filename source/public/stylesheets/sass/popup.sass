@@ -1,0 +1,41 @@
+@import colors.sass
+@import mixins.sass
+
+.popup
+	position: absolute
+	background-color= !black
+	border: 1px solid white
+	padding: 5px
+	+rounded-corners(5px)
+	+opacity(0.85)
+	
+	a
+		color= !yellow
+		text-decoration: none
+	
+	a:hover
+		text-decoration: underline
+	
+	h3
+		margin: 0
+		margin-bottom: 5px
+		font-size: 12px
+	
+	textarea
+		width: 100%
+
+	.triangle
+		position: absolute
+		width: 0
+		height: 0
+	.triangle.top
+		top: -10px
+		left: 50%
+		margin-left: -5px
+		border-top: 0px solid transparent
+		border-left: 10px solid transparent
+		border-right: 10px solid transparent
+		border-bottom: 10px solid white
+	.triangle.top.black
+		top: -9px
+		border-bottom-color= !black

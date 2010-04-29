@@ -2,13 +2,13 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     
-    unauthorized! unless can? :create, @user
+    authorize! :create, @user
   end
 
   def create
     @user = User.new(params[:user])
     
-    unauthorized! unless can? :create, @user
+    authorize! :create, @user
     
     if @user.save
       flash[:notice] = "Account registered!"
@@ -21,19 +21,19 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     
-    unauthorized! unless can? :read, @user
+    authorize! :read, @user
   end
 
   def edit
     @user = current_user
     
-    unauthorized! unless can? :edit, @user
+    authorize! :edit, @user
   end
 
   def update
     @user = current_user # makes our views "cleaner" and more consistent
     
-    unauthorized! unless can? :edit, @user
+    authorize! :edit, @user
     
     if @user.update_attributes(params[:user])
       flash[:notice] = "Account updated!"

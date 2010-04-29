@@ -2,13 +2,13 @@ class UserSessionsController < ApplicationController
   def new
     @user_session = UserSession.new
     
-    unauthorized! unless can? :create, @user_session
+    authorize! :create, @user_session
   end
 
   def create
     @user_session = UserSession.new(params[:user_session])
     
-    unauthorized! unless can? :create, @user_session
+    authorize! :create, @user_session
     
     if @user_session.save
       flash[:notice] = "Login successful!"
@@ -19,7 +19,7 @@ class UserSessionsController < ApplicationController
   end
 
   def destroy
-    unauthorized! unless can? :destroy, current_user_session
+    authorize! :destroy, current_user_session
     
     current_user_session.destroy
     flash[:notice] = "Logout successful!"

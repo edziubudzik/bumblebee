@@ -54,6 +54,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :block_types
+  map.resources :stage_types
   
   map.root :controller => "users", :action => "show"
   

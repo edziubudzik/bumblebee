@@ -1,0 +1,12 @@
+<h1>Rodzaje etapów</h1>
+
+<% for stage_type in @stage_types %>
+	<p>
+          <b><%= link_to stage_type.name, stage_type_path(stage_type) %></b> &nbsp;
+          <%= link_to 'edytuj', edit_stage_type_path(stage_type) %>,
+	  <%= link_to 'usuń', stage_type_path(stage_type), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten rodzaj etapu?' %>
+        </p>
+<% end %>
+
+<br />
+<%= link_to 'Stwórz nowy', new_stage_type_path() %>

@@ -1,0 +1,10 @@
+<h1>Nowy rodzaj etapu</h1>
+
+<%= error_messages_for :stage_type %>
+
+<% form_for @stage_type do |f| %>
+	<%= render :partial => 'form', :locals => { :f => f } %>
+	<p>
+		<input type="submit" value="Utwórz" /> lub <%= link_to 'anuluj', stage_types_path %>
+	</p>
+<% end %>

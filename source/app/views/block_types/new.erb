@@ -5,15 +5,7 @@
 <% form_for @block_type do |f| %>
 	<%= render :partial => 'form', :locals => { :f => f } %>
 	<p>
-                <% for stage_type in @stage_types %>
-                        <p>
-                          <%= check_box_tag "block_type[stage_types][]", stage_type, @block_type.has_stage_type?(stage_type) %>
-                          <%= stage_type.name %>
-                        </p>
-                <% end %>
-                <%= hidden_field_tag "block_type[stage_types][]", "" %>
-
-		<input type="submit" value="Utwórz" /> lub <%= link_to 'anuluj', block_types_path %>
+  		<input type="submit" value="Utwórz" /> lub <%= link_to 'anuluj', block_types_path %>
 	</p>
         
 

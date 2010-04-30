@@ -2,7 +2,7 @@ class Demo < ActiveRecord::Base
   has_one :event, :as => :eventable
   belongs_to :project
   has_many :demo_activities, :include => :user, :order => 'created_at desc'
-  has_many :bug_reports, :include => :user, :order => 'created_at desc'
+  has_many :bug_reports, :include => :user, :order => 'bug_reports.created_at desc'
   
   validates_presence_of :name, :description, :url
   validates_length_of :name, :url, :maximum => 255

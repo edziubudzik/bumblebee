@@ -1,3 +1,5 @@
 <h1><%= @stage_type.name %></h1>
 
+<%= link_to 'Edytuj', edit_stage_type_path(@stage_type.id) %>
+<br />
 <%= link_to 'Przeglądaj rodzaje etapów', stage_types_path() %>

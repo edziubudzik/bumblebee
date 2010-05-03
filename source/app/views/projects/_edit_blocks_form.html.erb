@@ -1,0 +1,15 @@
+<h2>Klocki składowe</h2>
+
+<% for block_type in BlockType.find(:all) %>
+<p>
+  <% @block = @blocks.detect { |obj| obj.block_type_id == block_type.id } %>
+  <% if @block %>
+    <%= check_box_tag "blocks_ids[]", @block.id, true %>
+    <b><%= block_type.name %></b> &nbsp;
+    <%#= link_to 'edytuj', edit_project_block_path(@project.id, @block.id) %>
+  <% else %>
+    <%= check_box_tag "block_type_ids[]", block_type.id, false %>
+    <%= block_type.name %>
+  <%  end %>
+</p>
+<% end %>

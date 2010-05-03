@@ -1,0 +1,14 @@
+<h2>Etapy</h2>
+
+<% for stage_type in StageType.find(:all) %>
+<p>
+  <% @stage = @stages.detect { |obj| obj.stage_type_id == stage_type.id } %>
+  <% if @stage %>
+    <%= check_box_tag "stages_ids[]", @stage.id, true %>
+    <b><%= stage_type.name %></b>
+  <% else %>
+    <%= check_box_tag "stage_type_ids[]", stage_type.id, false %>
+    <%= stage_type.name %>
+  <%  end %>
+</p>
+<% end %>

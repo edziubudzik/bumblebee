@@ -2,6 +2,11 @@
 
 <% for project in @projects %>
 	<p>
-                <b><%= link_to project.name, project_path(project) %></b>
+          <b><%= link_to project.name, project_path(project) %></b> &nbsp;
+          <%= link_to 'edytuj', edit_project_path(project) %>,
+	  <%= link_to 'usuń', project_path(project), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten projekt?' %>
 	</p>
 <% end %>
+
+<br />
+<%= link_to 'Stwórz nowy', new_project_path() %>

@@ -4,8 +4,7 @@
 
 <% form_for @block_type do |f| %>
 	<%= render :partial => 'form', :locals => { :f => f } %>
-
 	<p>
-		<input type="submit" value="Zapisz" /> lub <%= link_to 'anuluj', block_type_path(@block_type) %>
+          <input type="submit" value="Zapisz" /> lub <%= link_to 'anuluj', block_type_path(@block_type) %>
 	</p>
 <% end %>

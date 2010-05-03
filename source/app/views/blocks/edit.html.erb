@@ -1,11 +1,10 @@
-<h1><%= @block.name %></h1>
+<h1><%= @block_type.name %></h1>
 
 <%= error_messages_for :block %>
 
-<% form_for @block do |f| %>
-	<%= render :partial => 'form', :locals => { :f => f } %>
-	
-	<p>
-		<input type="submit" value="Zapisz" /> lub <%= link_to 'anuluj', block_path(@block) %>
-	</p>
+<% form_for [@project, @block] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p>
+    <input type="submit" value="Zapisz" /> lub <%= link_to 'anuluj', edit_project_path(@project) %>
+  </p>
 <% end %>

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :temps
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -48,6 +50,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :projects, :member => { :events => :get } do |project|
     project.resources :blocks
+    project.resources :stages
     project.resources :pages
     project.resources :demos, :member => { :browse => :get } do |demo|
       demo.resources :demo_activities

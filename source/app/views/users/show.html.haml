@@ -1,3 +1,7 @@
+%ul#links
+	- if can? :update, @user
+		%li= link_to "ustawienia konta", edit_user_path(@user)
+
 %h1 Pulpit
 
 %h2= @user.email

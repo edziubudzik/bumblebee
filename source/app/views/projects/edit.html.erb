@@ -1,3 +1,9 @@
+<%= render :partial => "sidebar" %>
+
+<ul id="back">
+	<li><%= link_to "« powrót do projektu", project_path(@project) %></li>
+</ul>
+
 <h1><%= @project.name %></h1>
 
 <%= error_messages_for :project %>

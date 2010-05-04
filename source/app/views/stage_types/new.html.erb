@@ -1,5 +1,9 @@
 <%= render :partial => "shared/configuration_sidebar" %>
 
+<ul id="back">
+	<li><%= link_to "« powrót do listy typów etapów", stage_types_path %></li>
+</ul>
+
 <h1>Nowy rodzaj etapu</h1>
 
 <%= error_messages_for :stage_type %>

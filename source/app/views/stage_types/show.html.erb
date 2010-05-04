@@ -1,7 +1,12 @@
 <%= render :partial => "shared/configuration_sidebar" %>
 
-<h1><%= @stage_type.name %></h1>
+<ul id="back">
+	<li><%= link_to "« powrót do listy typów etapów", stage_types_path %></li>
+</ul>
 
-<%= link_to 'Edytuj', edit_stage_type_path(@stage_type.id) %>
-<br />
-<%= link_to 'Przeglądaj rodzaje etapów', stage_types_path() %>
+<ul id="links">
+	<li><%= link_to "edytuj", edit_stage_type_path(@stage_type) %></li>
+	<li><%= link_to "usuń", stage_type_path(@stage_type), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten rodzaj etapu?' %></li>
+</ul>
+
+<h1><%= @stage_type.name %></h1>

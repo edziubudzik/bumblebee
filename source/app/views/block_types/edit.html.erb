@@ -1,5 +1,9 @@
 <%= render :partial => "shared/configuration_sidebar" %>
 
+<ul id="back">
+	<li><%= link_to "« powrót do listy typów klocków", block_types_path %></li>
+</ul>
+
 <h1><%= @block_type.name %></h1>
 
 <%= error_messages_for :block_type %>

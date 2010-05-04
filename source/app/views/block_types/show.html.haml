@@ -1,9 +1,18 @@
 %ul#back
-	%li= link_to "« powrót do listy rodzajów klocków składowych", block_types_path
+	%li= link_to "« powrót do listy typów klocków", block_types_path
+
+%ul#links
+	- if can? :update, @block_type
+		%li= link_to "edytuj", edit_block_type_path(@block_type)
+	- if can? :destroy, @block_type
+		%li= link_to "usuń", block_type_path(@block_type), :confirm => "Czy na pewno chcesz usunąć ten typ klocka?", :method => :delete
+
 
 %h1= @block_type.name
 
-%p
-	Etapy:
-	= (@block_type.stage_types.collect { |st| st.name }).join(", ")
-		
+%h3 Etapy
+
+- for stage_type in @stage_types
+	%strong= stage_type.name
+	= "(nakład pracy: #{@stage_types_costs[stage_type.id]})"
+	%br/

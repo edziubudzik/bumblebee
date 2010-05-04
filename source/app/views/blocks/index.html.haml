@@ -20,10 +20,10 @@
 		= render :partial => "block_types"
 			
 	%h3 Dodaj nowy typ klocka
-	- remote_form_for BlockType.new, :update => 'block_types' do |f|
-		= render :partial => 'block_types/form', :locals => { :f => f, :block_type => BlockType.new }
+	-# remote_form_for BlockType.new, :update => 'block_types' do |f|
+	-#	= render :partial => 'block_types/form', :locals => { :f => f, :block_type => BlockType.new }
 
-		%input{ :type => "submit", :value => "Utwórz" }
+	-#	%input{ :type => "submit", :value => "Utwórz" }
 
 :javascript
 	Droppables.add('blocks', {

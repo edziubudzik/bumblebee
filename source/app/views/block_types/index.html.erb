@@ -1,12 +1,13 @@
+<ul id="links">
+	<li><%= link_to "dodaj nowy", new_block_type_path %></li>
+</ul>
+
 <h1>Rodzaje klocków składowych</h1>
 
 <% for block_type in @block_types %>
 	<p>
-          <b><%= link_to block_type.name, block_type_path(block_type) %></b> &nbsp;
-          <%= link_to 'edytuj', edit_block_type_path(block_type) %>,
-	  <%= link_to 'usuń', block_type_path(block_type), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten rodzaj klocka składowego?' %>
-        </p>
+		<strong><%= link_to block_type.name, block_type_path(block_type) %></strong> &nbsp;
+		<%= link_to 'edytuj', edit_block_type_path(block_type) %>,
+		<%= link_to 'usuń', block_type_path(block_type), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten rodzaj klocka składowego?' %>
+	</p>
 <% end %>
-
-<br />
-<%= link_to 'Stwórz nowy', new_block_type_path() %>

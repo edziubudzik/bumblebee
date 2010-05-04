@@ -15,19 +15,31 @@ document.observe('dom:loaded', function() {
 
 Bumblebee.DemoBrowser = {
 	bugReportPopups: [],
+	projectId: false,
+	demoId: false,
+	userId: false,
 	
-	init: function(projectId, demoId) {
-		Cookie.init({ name: 'bumblebee' }, { enabled: false });
+	init: function() {
+		Cookie.init({ name: 'bumblebee', path: '/' }, { projectId: false, demoId: false, enabled: false, userId: false });
 		
 		if(this.getRequestParam('_bumblebee_enabled')) {
 			this.enable();
 		} else {
 			this.enabled = Cookie.getData('enabled');
+			this.projectId = Cookie.getData('projectId');
+			this.demoId = Cookie.getData('demoId');
+			this.userId = Cookie.getData('userId');
 		}
-		
+
 		if(!this.enabled) {
 			return false;
 		}
+		
+		var script = new Element('script', {
+			type: 'text/javascript',
+			src: 'http://localhost:3000/projects/' + this.projectId + '/demos/' + this.demoId + '/bug_reports.js?url='+escape(document.location)
+		})
+		document.body.insert(script);
 		
 		$$('*').invoke('observe', 'click', this.onElementClicked.bind(this));
 		
@@ -35,13 +47,13 @@ Bumblebee.DemoBrowser = {
 		
 		this.submitTarget = new Element('iframe', {
 			name: 'bumblebee_submit_target'
-		});
+		}).setStyle({ display: 'none' });
 		
 		this.form = new Element('form', {
 			method: 'post',
-			action: 'http://localhost:3000/projects/3/demos/1/demo_activities',
+			action: 'http://localhost:3000/projects/' + this.projectId + '/demos/' + this.demoId + '/demo_activities',
 			target: 'bumblebee_submit_target'
-		});
+		}).setStyle({ display: 'none' });
 		
 		this.urlElement = new Element('input', {
 			type: 'text',
@@ -53,15 +65,22 @@ Bumblebee.DemoBrowser = {
 			name: 'demo_activity[method]'
 		});
 		
+		this.userElement = new Element('input', {
+			type: 'text',
+			name: 'demo_activity[user_id]',
+			value: this.userId
+		});
+		
 		this.form.insert(this.urlElement);
 		this.form.insert(this.methodElement);
+		this.form.insert(this.userElement);
 
 		document.body.insert(this.submitTarget);
 		document.body.insert(this.form);
 	
 		$$('a').invoke('observe', 'click', this.onContentLinkClicked.bind(this));
 		// this.content.select('form').invoke('observe', 'submit', this.onFormSubmittedClicked.bind(this));
-		
+
 		this.onBugReportsLoaded();
 	},
 	
@@ -132,13 +151,23 @@ Bumblebee.DemoBrowser = {
 	enable: function() {
 		this.enabled = true;
 		this.showBar();
+		
+		this.projectId = this.getRequestParam('_bumblebee_project_id');
+		this.demoId = this.getRequestParam('_bumblebee_demo_id');
+
 		Cookie.setData('enabled', true);
+		Cookie.setData('projectId', this.projectId);
+		Cookie.setData('demoId', this.demoId);
+		Cookie.setData('userId', this.userId);
 	},
 	
 	disable: function() {
 		this.enabled = false;
 		this.hideBar();
 		Cookie.setData('enabled', false);
+		Cookie.setData('projectId', false);
+		Cookie.setData('demoId', false);
+		Cookie.setData('userId', false);
 	},
 	
 	loadBugReports: function(bugReports) {
@@ -147,7 +176,7 @@ Bumblebee.DemoBrowser = {
 	
 	onBugReportsLoaded: function() {
 		if(!this.bugReportRecords) {
-			setTimeout(this.bugReportRecords, 100);
+			setTimeout("Bumblebee.DemoBrowser.onBugReportsLoaded()", 100);
 			return false;
 		}
 
@@ -177,8 +206,9 @@ Bumblebee.DemoBrowser = {
 			x,
 			y,
 			'<h3>Zgłoszenie błędu</h3>' +
-			'<form action="http://localhost:3000/projects/3/demos/1/bug_reports" method="post" target="bumblebee_submit_target" onsubmit="document.location = document.location">' +
+			'<form action="http://localhost:3000/projects/' + this.projectId + '/demos/' + this.demoId + '/bug_reports" method="post" target="bumblebee_submit_target" onsubmit="document.location = document.location">' +
 				'<textarea name="bug_report[content]"></textarea><br/>' +
+				'<input type="hidden" name="bug_report[user_id]" value="' + this.userId + '" />' +
 				'<input type="hidden" name="bug_report[x]" value="' + x + '" />' +
 				'<input type="hidden" name="bug_report[y]" value="' + y + '" />' +
 				'<input type="hidden" name="bug_report[url]" value="' + document.location + '" />' +
@@ -221,5 +251,3 @@ Bumblebee.DemoBrowser = {
 		}
 	}
 }
-
-document.write('<script type="text/javascript" src="http://localhost:3000/projects/3/demos/1/bug_reports.js?url='+escape(document.location)+'"></script>');

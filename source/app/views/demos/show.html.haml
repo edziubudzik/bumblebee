@@ -9,7 +9,8 @@
 
 %h1= @demo.name
 
-%p= link_to @demo.url, browse_project_demo_path(@project, @demo)
+%p
+	%a{ :href => "#", :onclick => "window.open('#{@demo.url}#{@demo.url.index('?') ? '&' : '?'}_bumblebee_enabled=1&_bumblebee_project_id=#{@project.id}&_bumblebee_demo_id=#{@demo.id}&_bumblebee_user_id=#{@current_user.id}');"}= @demo.url
 
 %p= @demo.description
 

@@ -2,4 +2,4 @@
 %h2= @demo.project.name
 
 :javascript
-	window.open('#{@demo.url}#{@demo.url.index("?") ? "&" : "?"}_bumblebee_enabled=1');
+	window.open('#{@demo.url}#{@demo.url.index("?") ? "&" : "?"}_bumblebee_enabled=1&_bumblebee_project_id=#{@project.id}&_bumblebee_demo_id=#{@demo.id}');

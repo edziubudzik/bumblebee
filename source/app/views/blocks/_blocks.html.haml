@@ -1,0 +1,5 @@
+- for block in blocks
+	%li
+		= block.block_type.name unless block.block_type.nil?
+		=# link_to 'edytuj', edit_project_block_path(@project, block)
+		=# link_to 'usuń', project_block_path(@project, block), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten klocek?'

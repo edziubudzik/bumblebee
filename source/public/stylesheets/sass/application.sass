@@ -117,19 +117,13 @@ a#logo
 .hint
 	font-style: italic
 	
-#blocks
-	padding: 0
-	margin: 0
-	list-style: none
-	width: 300px
-
 #block_types_sidebar
 	width: 200px
 	position: absolute
 	right: 20px
 	top: 50px
 	
-#block_types
+#block_types, #blocks
 	padding: 0
 	padding-bottom: 20px
 	margin: 0
@@ -144,6 +138,13 @@ a#logo
 		border-color= !black
 		+rounded-corners(5px)
 	
+#blocks
+	width: 300px
+	
+	li
+		float: left
+		background-color: #aaa
+
 #footer
 	border-top: 5px solid grey
 	color: white

@@ -3,23 +3,17 @@
 
 %h1= "Klocki projektu \"#{@project.name}\""
 
-- if @blocks.count < 1
-	%p.hint Przeciągnij klocki z listy po prawej, aby uzupełnić projekt.
+%p.hint Przeciągnij klocki z listy po prawej, aby uzupełnić projekt.
 
 %ul#blocks
+	= render :partial => "blocks", :locals => { :blocks => @blocks }
 	
-	- for block in @blocks
-		%li
-			= block.block_type.name unless block.block_type.nil?
-			= link_to 'edytuj', edit_project_block_path(@project, block)
-			= link_to 'usuń', project_block_path(@project, block), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten klocek?'
-
 #block_types_sidebar
 	%h3 Typy klocków
 	%ul#block_types
 		= render :partial => "block_types"
 			
-	%h3 Dodaj nowy typ klocka
+	%h3= link_to "Dodaj nowy typ klocka", new_block_type_path
 	-# remote_form_for BlockType.new, :update => 'block_types' do |f|
 	-#	= render :partial => 'block_types/form', :locals => { :f => f, :block_type => BlockType.new }
 
@@ -31,9 +25,12 @@
 		hoverclass: 'hover',
 		onDrop: function(element) {
 			var blockTypeId = element.id.match(/_([0-9]+)$/)[1];
-			
-			new Ajax.Request('<%= project_blocks_path(@project) %>', {
-				parameters: 'block[block_type_id]=' + blockTypeId
+
+			new Ajax.Updater('blocks', '#{project_blocks_path(@project)}', {
+				parameters: 'block[block_type_id]=' + blockTypeId,
+				onSuccess: function() {
+					
+				}
 			});
 		}
 	});

@@ -5,7 +5,9 @@ class ProjectsController < ApplicationController
   before_filter :ensure_no_stage_type, :only => :update
   before_filter :ensure_no_block_type, :only => :update
 
-
+  create.success.wants.html do
+    redirect_to project_blocks_path(@project)
+  end
 
   edit.before do
     @stages = Stage.find_all_by_project_id @project.id

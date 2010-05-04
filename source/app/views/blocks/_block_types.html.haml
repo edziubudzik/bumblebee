@@ -1,0 +1,2 @@
+- for block_type in BlockType.find(:all)
+	%li{ :id => "block_type_#{block_type.id}", :class => "block_type"}= block_type.name

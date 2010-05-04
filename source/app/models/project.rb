@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
   has_many :blocks
   has_many :stages
   
-  has_many :demos
+  has_many :demos, :order => "created_at desc"
   
   has_many :pages
   

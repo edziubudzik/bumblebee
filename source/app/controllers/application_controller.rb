@@ -16,6 +16,11 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+  
+  def render(*args)
+    	args.first[:layout] = false if request.xhr? and args.first[:layout].nil?
+  	super
+  end
 
   private
     def current_user_session

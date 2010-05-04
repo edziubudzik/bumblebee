@@ -13,3 +13,6 @@
 	.canvas
 
 %h1= @project.name
+
+- unless @project.demos.first.nil?
+	%p= link_to "» Najnowsza wersja demonstracyjna (#{@project.demos.first.url}) #{@project.demos.first.created_at}", project_demo_path(@project, @project.demos.first)

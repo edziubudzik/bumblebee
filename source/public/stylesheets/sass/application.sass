@@ -75,6 +75,7 @@ a#logo
 	position: relative
 	float: left
 	width: 70%
+	min-height: 800px
 	background-color: white
 	+spacing
 	+rounded-corners
@@ -92,6 +93,36 @@ a#logo
 		height: 100%
 		width: 100%
 		background-color: white
+
+.hint
+	font-style: italic
+	
+#blocks
+	padding: 0
+	margin: 0
+	list-style: none
+	width: 300px
+
+#block_types_sidebar
+	width: 200px
+	position: absolute
+	right: 20px
+	top: 50px
+	
+#block_types
+	padding: 0
+	padding-bottom: 20px
+	margin: 0
+	list-style: none
+	
+	li
+		width: 180px
+		margin: 5px
+		padding: 5px
+		background-color= !yellow
+		border: 1px solid black
+		border-color= !black
+		+rounded-corners(5px)
 	
 #footer
 	border-top: 5px solid grey

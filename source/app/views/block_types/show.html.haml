@@ -1,0 +1,9 @@
+%ul#back
+	%li= link_to "« powrót do listy rodzajów klocków składowych", block_types_path
+
+%h1= @block_type.name
+
+%p
+	Etapy:
+	= (@block_type.stage_types.collect { |st| st.name }).join(", ")
+		

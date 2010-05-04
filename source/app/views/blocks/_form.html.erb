@@ -1,8 +1,15 @@
 <%= error_messages_for 'block' %>
 
-<table class="form">
-	<tr>
-	  <td class="label"><label for="block_block_type_id">Block type id</label></td>
-	  <td><%= text_field 'block', 'block_type_id' %></td>
-	</tr>
-</table>
+<%= link_to 'Edytuj rodzaj klocka', edit_block_type_path(@block_type) %>
+
+<br />
+
+<% for stage_type in StageType.find(:all) %>
+<p>
+  <%= check_box_tag "block[stage_ids][]", stage_type.id, true %>
+  <%= stage_type.name %>
+  <%#*<br />%>
+  <%#*&nbsp; nakład pracy: <%= text_field "stage_types_costs", stage_type.id, :value => @stage_types_costs[stage_type.id].to_s %>
+  <%#*<br />%>
+</p>
+<% end %>

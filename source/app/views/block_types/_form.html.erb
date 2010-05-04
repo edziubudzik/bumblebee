@@ -1,10 +1,12 @@
 Nazwa: <%= f.text_field :name %>
 <%= f.error_message_on :name %>
 
-
 <% for stage_type in StageType.find(:all) %>
 <p>
   <%= check_box_tag "block_type[stage_type_ids][]", stage_type.id, block_type.stage_types.include?(stage_type) %>
   <%= stage_type.name %>
+  <br />
+  &nbsp; nakład pracy: <%= text_field "stage_types_costs", stage_type.id, :value => @stage_types_costs[stage_type.id].to_s %>
+  <br />
 </p>
 <% end %>

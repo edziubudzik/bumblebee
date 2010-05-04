@@ -4,8 +4,7 @@
 
 <% form_for @project do |f| %>
 	<%= render :partial => 'form', :locals => { :f => f } %>
-	
 	<p>
-		<input type="submit" value="Utwórz" /> lub <%= link_to 'anuluj', projects_path %>
+          <input type="submit" value="Utwórz" /> lub <%= link_to 'anuluj', projects_path %>
 	</p>
 <% end %>

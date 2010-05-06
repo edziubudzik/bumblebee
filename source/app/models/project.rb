@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
-  has_many :blocks
+  has_many :blocks, :after_add => :update_stages
   has_many :stages
+  has_many :stage_types, :through => :stages
   
   has_many :demos, :order => "created_at desc"
   
@@ -19,4 +20,18 @@ class Project < ActiveRecord::Base
   
     event_ids.empty? ? "0" : event_ids.join(',')  
   end
+
+  private
+
+  def update_stages(block)
+    for stage_type_id in block.block_type.stage_type_ids
+      if stage_type_ids.include?(stage_type_id)
+        stage = stages.select { |s| s.stage_type_id == stage_type_id }
+      else
+        stage = stages.create :stage_type_id => stage_type_id
+      end
+      block.stages << stage
+    end
+  end
+  
 end

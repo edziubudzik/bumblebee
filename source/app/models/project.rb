@@ -24,13 +24,16 @@ class Project < ActiveRecord::Base
   private
 
   def update_stages(block)
-    for stage_type_id in block.block_type.stage_type_ids
-      if stage_type_ids.include?(stage_type_id)
-        stage = stages.select { |s| s.stage_type_id == stage_type_id }
+    for stage_type in block.block_type.stage_types
+      if stage_type_ids.include?(stage_type.id)
+        stage = (stages.select { |s| s.stage_type_id == stage_type.id }).first
       else
-        stage = stages.create :stage_type_id => stage_type_id
+        stage = stages.create :stage_type_id => stage_type.id
       end
-      block.stages << stage
+			btst = block.block_type.block_type_stage_types.find :first, :conditions => {:stage_type_id => stage_type.id}
+			block_stage = BlockStage.new :cost => btst.cost
+			block_stage.stage = stage
+			block.block_stages << block_stage
     end
   end
   

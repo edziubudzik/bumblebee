@@ -1,0 +1,21 @@
+%li{ :id => "block_#{block.id}"}
+	%strong= block.block_type.name unless block.block_type.nil?
+	=# link_to 'edytuj', edit_project_block_path(@project, block)
+	%a.icon.edit{:href => "#"}
+	= link_to "", project_block_path(@project, block), :method => 'delete', :confirm => 'Czy na pewno chcesz usunąć ten klocek?', :class => "icon close"
+
+	.cost_bar
+		- for block_stage in block.block_stages
+			%a{:title => block_stage.stage.stage_type.name, :style => "background-color: ##{block_stage.stage.stage_type.color}; width: #{block_stage.block_cost_participation}px"}= block_stage.cost || 0
+
+	.settings{:style => "display: none"}
+		- form_for block, :url => project_block_path(@project, block) do |f|
+			%table.form
+				- f.fields_for :block_stages do |bs|
+					%tr
+						%td.label= bs.object.stage.stage_type.name
+						%td= bs.text_field :cost, :size => 3
+			%p= submit_tag "Zapisz"
+
+:javascript
+	new Bumblebee.Block('block_#{block.id}')

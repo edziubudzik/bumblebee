@@ -4,4 +4,8 @@ class Block < ActiveRecord::Base
   
   has_many :stages, :through => :block_stages
   has_many :block_stages
+  
+  def cost
+    block_stages.sum :cost
+  end
 end

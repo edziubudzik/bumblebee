@@ -5,7 +5,11 @@ class BlockStage < ActiveRecord::Base
   belongs_to :block
 
   def block_cost_participation
-    (cost.to_f/block.cost.to_f*100).round
+    if block.cost > 0
+      (cost.to_f/block.cost.to_f*100).round
+    else
+      0
+    end
   end
   
 end

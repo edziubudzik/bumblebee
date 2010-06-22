@@ -20,6 +20,14 @@ class Project < ActiveRecord::Base
   
     event_ids.empty? ? "0" : event_ids.join(',')  
   end
+  
+  def page_versions
+    (pages.collect { |p| p.versions }).flatten
+  end
+  
+  def all_activities
+    ((pages + page_versions + demos + blocks).sort_by { |a| a.created_at }).reverse
+  end
 
   private
 

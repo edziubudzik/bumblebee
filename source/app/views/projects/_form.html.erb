@@ -4,4 +4,14 @@
     <td><%= f.text_field :name %></td>
     <td><%= f.error_message_on :name %></td>
   </tr>
+	<tr>
+    <td class="label"><%= f.label :start_date, 'Data rozpoczęcia:' %></td>
+    <td><%= f.date_select :start_date %></td>
+    <td><%= f.error_message_on :start_date %></td>
+  </tr>
+	<tr>
+    <td class="label"><%= f.label :human_resources, 'Liczebność zespołu:' %></td>
+    <td><%= f.text_field :human_resources %></td>
+    <td><%= f.error_message_on :human_resources %></td>
+  </tr>
 </table>

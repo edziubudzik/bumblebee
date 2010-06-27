@@ -15,6 +15,12 @@
 		- for event in @project.events
 			%li{:id => "event_#{event.id}", :class => event.type}
 
+- for stage in @project.stages
+	%p
+		= stage.stage_type.name
+		%br/
+		= stage.start_date
+
 %h1= @project.name
 
 - unless @project.demos.first.nil?

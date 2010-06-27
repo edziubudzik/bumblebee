@@ -6,4 +6,34 @@ class Stage < ActiveRecord::Base
   has_many :block_stages
   
   has_many :events, :as => :eventable
+
+	def start_date
+		if previous
+			previous.end_date
+		else
+			project.start_date
+		end
+	end
+
+	def end_date
+		start_date + (cost/8/project.human_resources).days
+	end
+
+	def previous
+		return @previous if @previous
+
+		for stage in project.stages
+			if (stage.stage_type.position < stage_type.position) &&
+					((@previous && stage.stage_type.position > @previous.stage_type.position) or !@previous)
+						@previous = stage
+			end
+		end
+
+		@previous
+	end
+
+	def cost
+		@cost ||= block_stages.sum(:cost)
+	end
+	
 end

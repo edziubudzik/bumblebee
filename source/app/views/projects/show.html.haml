@@ -11,9 +11,39 @@
 
 
 #timeline
-	.canvas
+	%ul.canvas
+		- for event in @project.events
+			%li{:id => "event_#{event.id}", :class => event.type}
 
 %h1= @project.name
 
 - unless @project.demos.first.nil?
-	%p= link_to "» Najnowsza wersja demonstracyjna (#{@project.demos.first.url}) #{@project.demos.first.created_at}", project_demo_path(@project, @project.demos.first)
+	%p= link_to "» Najnowsza wersja demonstracyjna (#{@project.demos.first.url}) #{time_ago_in_words(@project.demos.first.created_at)} temu", project_demo_path(@project, @project.demos.first)
+	
+	%p
+		%br/
+	
+	%ul#activity
+		- for activity in @project.all_activities
+			%li
+				- if activity.is_a? Demo
+					= time_ago_in_words(activity.created_at) + " temu"
+					została opublikowana wersja demonstracyjna
+					= link_to activity.url, project_demo_path(activity, @project)
+				- elsif activity.is_a? Block
+					= time_ago_in_words(activity.created_at) + " temu"
+					dodano klocek
+					/ = link_to activity.user.email, user_path(activity.user)
+					= "\"#{activity.block_type.name}\""
+				- elsif activity.is_a?(VestalVersions::Version)  && activity.versioned.is_a?(Page)
+					= link_to image_tag("avatars/#{activity.versioned.user.id}.jpg", :size => "40x40"), user_path(activity.versioned.user)
+					= time_ago_in_words(activity.created_at) + " temu"
+					= link_to activity.versioned.user.email, user_path(activity.versioned.user)
+					zmienił stronę
+					= '"' + link_to(activity.versioned.title, project_page_path(activity.versioned, @project)) + '"'
+				- elsif activity.is_a? Page
+					= link_to image_tag("avatars/#{activity.user.id}.jpg", :size => "40x40"), user_path(activity.user)
+					= time_ago_in_words(activity.created_at) + " temu"
+					= link_to activity.user.email, user_path(activity.user)
+					utworzył stronę
+					= '"' + link_to(activity.title, project_page_path(activity, @project)) + '"'

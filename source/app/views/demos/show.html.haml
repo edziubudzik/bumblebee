@@ -20,12 +20,16 @@
 	- for activity in @demo.all_activities
 		%li
 			- if activity.is_a? DemoActivity
+				= link_to image_tag("avatars/#{activity.user.id}.jpg", :size => "40x40"), user_path(activity.user)
+				= time_ago_in_words(activity.created_at) + " temu"
+				%br/
 				= link_to activity.user.email, user_path(activity.user)
 				wyświetlił
 				= activity.url
-				= activity.created_at
 			- elsif activity.is_a? BugReport
+				= link_to image_tag("avatars/#{activity.user.id}.jpg", :size => "40x40"), user_path(activity.user)
+				= time_ago_in_words(activity.created_at) + " temu"
+				%br/
 				= link_to activity.user.email, user_path(activity.user)
 				zgłosił błąd na stronie
 				= activity.url
-				= activity.created_at

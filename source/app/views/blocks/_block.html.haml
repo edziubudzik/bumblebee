@@ -6,7 +6,7 @@
 
 	.cost_bar
 		- for block_stage in block.block_stages
-			%a{:title => "#{block_stage.stage.stage_type.name} - #{block_stage.progress}%", :style => "background-color: ##{block_stage.stage.stage_type.color}; width: #{block_stage.block_cost_participation}px"}= "#{block_stage.percental_progress}%"
+			%a{:title => "#{block_stage.stage.stage_type.name} - #{block_stage.percental_progress}%", :style => "background-color: ##{block_stage.stage.stage_type.color}; width: #{block_stage.block_cost_participation}px"}= "#{block_stage.percental_progress}%"
 
 	.settings{:style => "display: none"}
 		- form_for block, :url => project_block_path(@project, block) do |f|

@@ -140,26 +140,33 @@ a#logo
 		border: 1px solid black
 		border-color= !black
 		+rounded-corners(5px)
-	
+
+.cost_bar
+	height: 20px
+	margin-top: 5px
+	margin-bottom: 5px
+
+	a
+		text-align: center
+		display: block
+		float: left
+		height: 100%
+		width: 0
+		padding-top: 5px
+
 #blocks
 	width: 300px
-	
+
+	.cost_bar
+		height: 15px
+
+		a
+			padding: 0px
+
 	li
 		position: relative
 		float: left
 		background-color: #aaa
-		
-		.cost_bar
-			height: 15px
-			margin-top: 5px
-			margin-bottom: 5px
-			
-			a
-				text-align: center
-				display: block
-				float: left
-				height: 100%
-				width: 0
 
 .icon
 	display: block

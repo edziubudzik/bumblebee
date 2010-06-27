@@ -9,19 +9,22 @@
 	- if can? :destroy, @project
 		%li= link_to "usuń", project_path(@project), :method => 'delete', :confirm => "Czy na pewno chcesz usunąć ten projekt?"
 
-
-#timeline
-	%ul.canvas
-		- for event in @project.events
-			%li{:id => "event_#{event.id}", :class => event.type}
-
-- for stage in @project.stages
-	%p
-		= stage.stage_type.name
-		%br/
-		= stage.start_date
-
 %h1= @project.name
+
+%br/
+
+.cost_bar
+	- for stage in @project.stages
+		%a{:title => "#{stage.stage_type.name} - #{stage.percental_progress}%", :style => "background-color: ##{stage.stage_type.color}; width: #{stage.project_cost_participation*6}px"}= "#{stage.percental_progress}%"
+
+%br/
+
+<b>SPI</b> (wskaźnik realizacji harmonogramu):
+= @project.earned_value_schedule_performance_index
+%br/
+<b>CPI</b> (wskaźnik realizacji kosztów):
+= @project.earned_value_cost_performance_index
+%br/
 
 - unless @project.demos.first.nil?
 	%p= link_to "» Najnowsza wersja demonstracyjna (#{@project.demos.first.url}) #{time_ago_in_words(@project.demos.first.created_at)} temu", project_demo_path(@project, @project.demos.first)

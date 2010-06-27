@@ -99,6 +99,7 @@ class ProjectsController < ApplicationController
     end
   end
 
+	
   def add_new_stages_if_needed_after_adding_new_block(block_type_id)
     # TODO
   end

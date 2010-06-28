@@ -36,16 +36,30 @@ class Stage < ActiveRecord::Base
 		@cost ||= block_stages.sum(:cost)
 	end
 
+	def time_spent
+		@time_spent ||= block_stages.sum(:time_spent)
+	end
+
 	def progress
-		@progress ||= block_stages.sum(:progress)
+		sum1 = 0
+		sum2 = 0
+		for bs in  block_stages
+			sum1 += bs.progress.to_f/100*bs.cost
+			sum2 += bs.cost
+		end
+		@progress ||= sum1.to_f/sum2*100
+	end
+
+	def earned_value
+		sum = 0
+		for bs in  block_stages
+			sum += bs.progress.to_f/100*bs.cost
+		end
+		@earned_value ||= sum.to_f
 	end
 
 	def percental_progress
-		if cost and progress
-			(progress.to_f/cost.to_f*100).round
-		else
-			0
-		end
+		progress ? progress : 0
 	end
 
 	def project_cost_participation

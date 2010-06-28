@@ -4,6 +4,7 @@
 %h1 Lista projektów
 
 - for project in @projects
+	%br/
 	%h2= link_to project.name, project_path(project)
 	.cost_bar
 		- for stage in project.stages

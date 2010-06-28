@@ -13,11 +13,7 @@ class BlockStage < ActiveRecord::Base
   end
 
 	def percental_progress
-		if cost and progress
-			(progress.to_f/cost.to_f*100).round
-		else
-			0
-		end
+		progress ? progress : 0
 	end
   
 end

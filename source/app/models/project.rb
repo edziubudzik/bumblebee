@@ -43,23 +43,18 @@ class Project < ActiveRecord::Base
 		earned_value_earned_value.to_f/earned_value_actual_cost
 	end
 
-	#!!!!!!!!!!!!!!!!!
-  #private
-
-	def duration_in_days
-		(cost.to_f/8/human_resources.to_f).ceil
-	end
+	private
 
 	def earned_value_planned_value
-		1.to_f/duration_in_days*cost
+		@earned_value_planned_value ||= (Date.today - start_date).to_f*8*human_resources
 	end
 
 	def earned_value_earned_value
-		earned_value_planned_value
+		@earned_value_earned_value ||= stages.collect(&:earned_value).sum
 	end
 
 	def earned_value_actual_cost
-		@progress ||= stages.collect(&:progress).sum
+		@earned_value_actual_cost ||= stages.collect(&:time_spent).sum
 	end
 
   def update_stages(block)

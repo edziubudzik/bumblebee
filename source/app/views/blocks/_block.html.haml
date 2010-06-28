@@ -10,13 +10,23 @@
 
 	.settings{:style => "display: none"}
 		- form_for block, :url => project_block_path(@project, block) do |f|
-			%table.form
-				- f.fields_for :block_stages do |bs|
+			- f.fields_for :block_stages do |bs|
+				%br/
+				%table.form
 					%tr
-						%td.label= bs.object.stage.stage_type.name
+						%b= bs.object.stage.stage_type.name
+					%tr
+						%td.label raportowany czas:
 						%td= bs.text_field :time_spent, :size => 2
-						%td= bs.text_field :progress, :size => 2
+						%td h
+					%tr
+						%td.label wartość wypracowana:
+						%td= bs.text_field :progress, :size => 3
+						%td %
+					%tr
+						%td.label oszacowany czas:
 						%td= bs.text_field :cost, :size => 2
+						%td h
 			%p= submit_tag "Zapisz"
 
 :javascript

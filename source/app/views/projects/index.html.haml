@@ -1,0 +1,10 @@
+%ul#links
+	%li= link_to "dodaj nowy", new_project_path
+
+%h1 Lista projektów
+
+- for project in @projects
+	%h2= link_to project.name, project_path(project)
+	.cost_bar
+		- for stage in project.stages
+			%a{:title => "#{stage.stage_type.name} - #{stage.percental_progress}%", :style => "background-color: ##{stage.stage_type.color}; width: #{stage.project_cost_participation*6}px"}= "#{stage.percental_progress}%"

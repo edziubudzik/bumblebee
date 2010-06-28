@@ -28,12 +28,13 @@
 
 %br/
 
-<b>SPI</b> <small>(<i>wskaźnik realizacji harmonogramu</i>)</small>:
-= @project.earned_value_schedule_performance_index
-%br/
-<b>CPI</b> <small>(<i>wskaźnik realizacji kosztów</i>)</small>:
-= @project.earned_value_cost_performance_index
-%br/
+- if ((@project.earned_value_schedule_performance_index > 0) && (@project.earned_value_cost_performance_index > 0))
+	<b>SPI</b> <small>(<i>wskaźnik realizacji harmonogramu</i>)</small>:
+	= @project.earned_value_schedule_performance_index
+	%br/
+	<b>CPI</b> <small>(<i>wskaźnik realizacji kosztów</i>)</small>:
+	= @project.earned_value_cost_performance_index
+	%br/
 
 - unless @project.demos.first.nil?
 	%p= link_to "» Najnowsza wersja demonstracyjna (#{@project.demos.first.url}) #{time_ago_in_words(@project.demos.first.created_at)} temu", project_demo_path(@project, @project.demos.first)

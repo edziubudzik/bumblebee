@@ -49,5 +49,13 @@ Bumblebee.Popup = Class.create({
 	
 	hide: function() {
 		this.element.hide();
+	},
+	
+	toggle: function() {
+		if(this.element.style.display == 'none') {
+			this.show();
+		} else {
+			this.hide();
+		}
 	}
 });

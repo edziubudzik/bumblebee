@@ -13,9 +13,18 @@
 
 %br/
 
-.cost_bar
+.cost_bar#project_cost_bar
 	- for stage in @project.stages
-		%a{:title => "#{stage.stage_type.name} - #{stage.percental_progress}%", :style => "background-color: ##{stage.stage_type.color}; width: #{stage.project_cost_participation*6}px"}= "#{stage.percental_progress}%"
+		%a{:id => "cost_participation_#{stage.id}", :title => "#{stage.stage_type.name} - #{stage.percental_progress}%", :href => "#", :onclick => "cost_participation_#{stage.id}.toggle()", :style => "background-color: ##{stage.stage_type.color}; width: #{stage.project_cost_participation*6}px"}= "#{stage.percental_progress}%"
+		:javascript
+			var a = $('cost_participation_#{stage.id}');
+			var cost_participation_#{stage.id} = new Bumblebee.Popup(
+				a.cumulativeOffset().left+a.getWidth()/2, 
+				$('project_cost_bar').cumulativeOffset().top+20, 
+				'<h3>#{stage.stage_type.name}</h3>' +
+				'<strong>Data rozpoczęcia:</strong> #{stage.start_date}<br/>' +
+				'<strong>Data zakończenia:</strong> #{stage.end_date}'
+			);
 
 %br/
 

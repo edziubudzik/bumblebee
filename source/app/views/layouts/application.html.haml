@@ -6,8 +6,9 @@
 
 		%title Bumblebee
 		
+		%link{:href => '/stylesheets/popup.css', :rel => "stylesheet", :type => "text/css"}
 		%link{:href => '/stylesheets/application.css', :rel => "stylesheet", :type => "text/css"}
-		= javascript_include_tag :defaults
+		= javascript_include_tag :defaults, 'popup.js'
 		
 		= yield :head
 	%body

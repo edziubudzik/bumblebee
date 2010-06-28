@@ -45,10 +45,12 @@
 	- for activity in @project.all_activities
 		%li
 			- if activity.is_a? Demo
+				= image_tag("avatars/0.jpg", :size => "40x40")
 				= time_ago_in_words(activity.created_at) + " temu"
 				została opublikowana wersja demonstracyjna
 				= link_to activity.url, project_demo_path(activity, @project)
 			- elsif activity.is_a? Block
+				= image_tag("avatars/0.jpg", :size => "40x40")
 				= time_ago_in_words(activity.created_at) + " temu"
 				dodano klocek
 				/ = link_to activity.user.email, user_path(activity.user)

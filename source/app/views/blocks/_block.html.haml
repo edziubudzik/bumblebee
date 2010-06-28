@@ -14,8 +14,9 @@
 				- f.fields_for :block_stages do |bs|
 					%tr
 						%td.label= bs.object.stage.stage_type.name
-						%td= bs.text_field :progress, :size => 3
-						%td= bs.text_field :cost, :size => 3
+						%td= bs.text_field :time_spent, :size => 2
+						%td= bs.text_field :progress, :size => 2
+						%td= bs.text_field :cost, :size => 2
 			%p= submit_tag "Zapisz"
 
 :javascript

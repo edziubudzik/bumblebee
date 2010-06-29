@@ -3,10 +3,10 @@ if(!Bumblebee) {
 }
 
 // if(!Cookie) {
-	document.write('<script type="text/javascript" src="http://localhost:3000/javascripts/cookie.js"></script>');
-	document.write('<script type="text/javascript" src="http://localhost:3000/javascripts/popup.js"></script>');
-	document.write('<link rel="stylesheet" href="http://localhost:3000/stylesheets/demo_browser.css" type="text/css" />');
-	document.write('<link rel="stylesheet" href="http://localhost:3000/stylesheets/popup.css" type="text/css" />');
+	document.write('<script type="text/javascript" src="http://akacja.wzks.uj.edu.pl/batorpio/mgr/javascripts/cookie.js"></script>');
+	document.write('<script type="text/javascript" src="http://akacja.wzks.uj.edu.pl/batorpio/mgr/javascripts/popup.js"></script>');
+	document.write('<link rel="stylesheet" href="http://akacja.wzks.uj.edu.pl/batorpio/mgr/stylesheets/demo_browser.css" type="text/css" />');
+	document.write('<link rel="stylesheet" href="http://akacja.wzks.uj.edu.pl/batorpio/mgr/stylesheets/popup.css" type="text/css" />');
 // }
 
 document.observe('dom:loaded', function() {
@@ -37,7 +37,7 @@ Bumblebee.DemoBrowser = {
 		
 		var script = new Element('script', {
 			type: 'text/javascript',
-			src: 'http://localhost:3000/projects/' + this.projectId + '/demos/' + this.demoId + '/bug_reports.js?url='+escape(document.location)
+			src: 'http://akacja.wzks.uj.edu.pl/batorpio/mgr/projects/' + this.projectId + '/demos/' + this.demoId + '/bug_reports.js?url='+escape(document.location)
 		})
 		document.body.insert(script);
 		
@@ -51,7 +51,7 @@ Bumblebee.DemoBrowser = {
 		
 		this.form = new Element('form', {
 			method: 'post',
-			action: 'http://localhost:3000/projects/' + this.projectId + '/demos/' + this.demoId + '/demo_activities',
+			action: 'http://akacja.wzks.uj.edu.pl/batorpio/mgr/projects/' + this.projectId + '/demos/' + this.demoId + '/demo_activities',
 			target: 'bumblebee_submit_target'
 		}).setStyle({ display: 'none' });
 		
@@ -206,7 +206,7 @@ Bumblebee.DemoBrowser = {
 			x,
 			y,
 			'<h3>Zgłoszenie błędu</h3>' +
-			'<form action="http://localhost:3000/projects/' + this.projectId + '/demos/' + this.demoId + '/bug_reports" method="post" target="bumblebee_submit_target" onsubmit="document.location = document.location">' +
+			'<form action="http://akacja.wzks.uj.edu.pl/batorpio/mgr/projects/' + this.projectId + '/demos/' + this.demoId + '/bug_reports" method="post" target="bumblebee_submit_target" onsubmit="document.location = document.location">' +
 				'<textarea name="bug_report[content]"></textarea><br/>' +
 				'<input type="hidden" name="bug_report[user_id]" value="' + this.userId + '" />' +
 				'<input type="hidden" name="bug_report[x]" value="' + x + '" />' +

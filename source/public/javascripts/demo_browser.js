@@ -112,10 +112,11 @@ Bumblebee.DemoBrowser = {
 			this.reportLink = new Element('a', {
 				href: '#'
 			});
+
 			this.reportLink.update('zgłoś błąd');
 			this.reportLink.observe('click', function(event) {
 				event.stop();
-				
+
 				if(this.mode == 'pointing') {
 					this.mode = false;
 					document.body.removeClassName('bumblebee_pointing');
@@ -192,12 +193,18 @@ Bumblebee.DemoBrowser = {
 			return false;
 		}
 		
+		var element = event.findElement();
+		
+		if(element.up('#demo_browser')) {
+			return false;
+		}
+		
 		event.stop();
 		
 		this.mode = false;
 		document.body.removeClassName('bumblebee_pointing');
 		
-		var element = event.findElement();
+		
 		var position = element.cumulativeOffset();
 		var x = position.left + element.getWidth()/2;
 		var y = position.top + element.getHeight()
